@@ -1,0 +1,16 @@
+function [log_ll] = likelihood(X, Z, M, sigma_A, sigma_X, K_plus, num_objects, object_dim)
+
+%Mu = Z*M*Z'*X; tr = 0;
+%t = length(X(1,:));
+%for i=1:num_objects
+%    tr = tr + (X(i,:) - Mu(i,:))*(sigma_X^2*diag(ones(t,1)))^-1*(X(i,:)-Mu(i,:))';
+%end;
+log_ll = -1*num_objects*object_dim*.5*log(2*pi) - ...
+    1*(num_objects - K_plus)*object_dim*log(sigma_X) - ...
+    K_plus*object_dim*log(sigma_A) - ...
+    object_dim*.5*log(det((Z'*Z + (sigma_X^2/sigma_A^2)*diag(ones(K_plus,1))))) + ...
+    (-1/(2*sigma_X^2)) * ...
+    trace(X'*(diag(ones(num_objects,1)) - Z*M*Z')*X);
+%    -.5*trace((X - Mu)*(sigma_X^2*diag(ones(t,1)))^-1*(X-Mu)');
+
+
