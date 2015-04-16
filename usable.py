@@ -1,7 +1,6 @@
-
-import functions
-
 from __future__ import division
+import functions as func
+# You need to convert them into .py files 
 import os
 import sys
 import glob
@@ -181,7 +180,7 @@ for mc in range(1000): # just test for 10 iterations
     
     print "At iteration",mc,": Kplus is",Kplus,", alpha is",alpha
     # print "Generating Z|alpha takes",elapsed1,"sec, and sampling sigmaX, sigmaA takes",elapsed2,"sec"
-    # print "In generating Z|alpha, sampling from Kplus takes",elapsed1k_count/N,"sec, and sampling new dishes takes",elapsed1N_count/N,"sec"ㄊ
+    # print "In generating Z|alpha, sampling from Kplus takes",elapsed1k_count/N,"sec, and sampling new dishes takes",elapsed1N_count/N,"sec"
     # print "In generating Z|alpha -- sampling from Kplus, initializing takes",elapsed1k_init,"sec; calculation takes",elapsed1k_calc,"sec"
     # print "----------------------------------------------------"
     
@@ -234,11 +233,11 @@ for mc in range(1000): # just test for 10 iterations
             # Prior: P(z_ik = 1 | z_(-i,k)) = m_(-i,k) / N, where m_(-i,k) = number of objects possess feature k, excluding i
             P = np.zeros(2)
             Z[i,k] = 1
-            M1 = calcM(Z,Kplus,sigmaX,sigmaA) 
-            P[1] = log_likelihood(X,Z[:,0:Kplus],M1,sigmaA,sigmaX,Kplus,N,D) + np.log(sum(Z[:,k])-Z[i,k]) - np.log(N)
+            M1 = func.calcM(Z,Kplus,sigmaX,sigmaA) 
+            P[1] = func.log_likelihood(X,Z[:,0:Kplus],M1,sigmaA,sigmaX,Kplus,N,D) + np.log(sum(Z[:,k])-Z[i,k]) - np.log(N)
             Z[i,k] = 0
-            M0 = calcM(Z,Kplus,sigmaX,sigmaA) 
-            P[0] = log_likelihood(X,Z[:,0:Kplus],M0,sigmaA,sigmaX,Kplus,N,D) + np.log(N-sum(Z[:,k])) - np.log(N)
+            M0 = func.calcM(Z,Kplus,sigmaX,sigmaA) 
+            P[0] = func.log_likelihood(X,Z[:,0:Kplus],M0,sigmaA,sigmaX,Kplus,N,D) + np.log(N-sum(Z[:,k])) - np.log(N)
             P = np.exp(P - max(P))
             # Sample from the posterior distribution
             rand = stats.uniform.rvs(loc=0,scale=1,size=1)           
@@ -276,7 +275,7 @@ for mc in range(1000): # just test for 10 iterations
             
             trun[ki] = (ki)*np.log(alphaN) - alphaN - np.log(np.math.factorial(ki)) 
             # posterior is proportional to prior x likelihood
-            trun[ki] += log_likelihood(X,Z[:,0:(Kplus+ki)],M,sigmaA,sigmaX,Kplus+ki,N,D)
+            trun[ki] += func.log_likelihood(X,Z[:,0:(Kplus+ki)],M,sigmaA,sigmaX,Kplus+ki,N,D)
             
         # Z[i,Kplus:(Kplus+4)] = 0
         Z[i,Kplus:(Kplus+3)] = 0
@@ -303,9 +302,9 @@ for mc in range(1000): # just test for 10 iterations
     start2 = timeit.default_timer()
     
     # M = calcM(Z, Kplus+new_dishes, sigmaX, sigmaA)
-    M = calcM(Z, Kplus, sigmaX, sigmaA)
+    M = func.calcM(Z, Kplus, sigmaX, sigmaA)
     #logLik = log_likelihood(X, Z[:,0:(Kplus+new_dishes)], M, sigmaA, sigmaX, Kplus+new_dishes, N, D)
-    logLik = log_likelihood(X, Z[:,0:Kplus], M, sigmaA, sigmaX, Kplus, N, D)
+    logLik = func.log_likelihood(X, Z[:,0:Kplus], M, sigmaA, sigmaX, Kplus, N, D)
     epsilonX = stats.uniform.rvs(loc=0,scale=1,size=1) 
     if epsilonX < 0.5:
         # sigmaX_star = sigmaX - epsilonX/40
@@ -315,9 +314,9 @@ for mc in range(1000): # just test for 10 iterations
         # sigmaX_star = sigmaX + epsilonX/20   
         sigmaX_star = sigmaX + stats.uniform.rvs(loc=0,scale=1,size=1)/20 
     # M_Xstar = calcM(Z, Kplus+new_dishes, sigmaX_star, sigmaA)
-    M_Xstar = calcM(Z, Kplus, sigmaX_star, sigmaA)
+    M_Xstar = func.calcM(Z, Kplus, sigmaX_star, sigmaA)
     # logLikX_star = log_likelihood(X, Z[:,0:(Kplus+new_dishes)], M_Xstar, sigmaA, sigmaX_star, Kplus+new_dishes, N, D)
-    logLikX_star = log_likelihood(X, Z[:,0:Kplus], M_Xstar, sigmaA, sigmaX_star, Kplus, N, D)
+    logLikX_star = func.log_likelihood(X, Z[:,0:Kplus], M_Xstar, sigmaA, sigmaX_star, Kplus, N, D)
     acc_X = np.exp(min(0, logLikX_star-logLik))
     
     # Step 3: Sample sigmaA_star (Metropolis)
@@ -330,9 +329,9 @@ for mc in range(1000): # just test for 10 iterations
         sigmaA_star = sigmaA + stats.uniform.rvs(loc=0,scale=1,size=1)/20
         # sigmaA_star = sigmaA + epsilonA/20   
     # M_Astar = calcM(Z, Kplus+new_dishes, sigmaX, sigmaA_star)
-    M_Astar = calcM(Z, Kplus, sigmaX, sigmaA_star)
+    M_Astar = func.calcM(Z, Kplus, sigmaX, sigmaA_star)
     # logLikA_star = log_likelihood(X, Z[:,0:(Kplus+new_dishes)], M_Astar, sigmaA_star, sigmaX, Kplus+new_dishes, N, D)
-    logLikA_star = log_likelihood(X, Z[:,0:Kplus], M_Astar, sigmaA_star, sigmaX, Kplus, N, D)
+    logLikA_star = func.log_likelihood(X, Z[:,0:Kplus], M_Astar, sigmaA_star, sigmaX, Kplus, N, D)
     acc_A = np.exp(min(0, logLikA_star-logLik))
     
     randX = stats.uniform.rvs(loc=0,scale=1,size=1)
