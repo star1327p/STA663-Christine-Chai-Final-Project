@@ -3,6 +3,7 @@
 % Written by Ilker Yildirim, September 2012.
 
 % fix the random seed for replicability.
+start = cputime;
 
 randn('seed', 1); rand('seed', 1);
 
@@ -36,7 +37,6 @@ end;
 HN = 0;
 for i=1:num_objects HN = HN + 1/i; end;
 
-E = 1000;
 E = 1000;
 BURN_IN = 0;
 SAMPLE_SIZE = 1000;
@@ -183,7 +183,7 @@ for e=1:E
     end;
 end;
 
-
+elapsed = cputime - start  % CPU time spent in seconds
 
 % Make figures.
 % Figures for the Computational cognition cheat sheet.
@@ -210,6 +210,9 @@ subplot(1,4,4); imagesc(reshape(X(4,:),6,6)); colormap(gray); axis off
 
 figure
 hist(chain.K(201:10:1000),3); colormap(gray)
+xlabel('K')
+ylabel('Count')
+title('Histogram of K values')
 
 figure
 Z=reshape(chain.Z(1000,:,1:4),100,4);
