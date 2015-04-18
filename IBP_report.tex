@@ -1,5 +1,7 @@
-\documentclass[11pt]{article}
-\usepackage[letterpaper, left=0.5in, top=0.5in, right=0.5in, bottom=0.5in,nohead,nofoot, verbose, ignoremp]{geometry}
+\documentclass[12pt]{article}
+\usepackage[letterpaper, left=0.5in, top=0.5in, right=0.5in, bottom=1in,nohead,nofoot, verbose, ignoremp]{geometry}
+\usepackage{amsmath}
+\usepackage{url}
 
 %% Document starts here ...
 %%
@@ -19,9 +21,10 @@
 \vspace{-0.5in}
 
 %\section{Introduction}
-\input{intro_test}
+\input{intro}
 
-\section{Code Structure and Simulated Data}
+%\section{Code Structure and Simulated Data}
+\input{algorithm}
 
 \section{Testing}
 
@@ -65,5 +68,9 @@ Table~\ref{tbl:hit} shows a simple version of tables.
 \section{Conclusion}
 
 Write your conclusion here
+
+\bibliographystyle{plain}
+\bibliography{intro}
+
 
 \end{document}

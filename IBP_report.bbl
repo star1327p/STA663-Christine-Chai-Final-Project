@@ -1,0 +1,51 @@
+\begin{thebibliography}{1}
+
+\bibitem{blei2003latent}
+David~M Blei, Andrew~Y Ng, and Michael~I Jordan.
+\newblock Latent dirichlet allocation.
+\newblock {\em Journal of Machine Learning Research}, 3:993--1022, 2003.
+
+\bibitem{doshi2008variational}
+Finale Doshi, Kurt~Tadayuki Miller, Jurgen Van~Gael, and Yee~Whye Teh.
+\newblock Variational inference for the indian buffet process.
+\newblock 2008.
+
+\bibitem{gershman2012tutorial}
+Samuel~J Gershman and David~M Blei.
+\newblock A tutorial on bayesian nonparametric models.
+\newblock {\em Journal of Mathematical Psychology}, 56(1):1--12, 2012.
+
+\bibitem{crp2004hierarchical}
+DMBTL Griffiths and MIJJB Tenenbaum.
+\newblock Hierarchical topic models and the nested chinese restaurant process.
+\newblock {\em Advances in neural information processing systems}, 16:17, 2004.
+
+\bibitem{griffiths2005infinite}
+Thomas Griffiths and Zoubin Ghahramani.
+\newblock Infinite latent feature models and the indian buffet process.
+\newblock 2005.
+
+\bibitem{williamson2009focused}
+Sinead Williamson, Chong Wang, Katherine Heller, and David Blei.
+\newblock Focused topic models.
+\newblock In {\em NIPS workshop on Applications for Topic Models: Text and
+  Beyond, Whistler, Canada}, 2009.
+
+\bibitem{ibp2012code}
+Ilker Yildirim.
+\newblock Indian buffet process -- sample code.
+\newblock \url{http://www.mit.edu/~ilkery/}.
+\newblock Online; accessed 2015.
+
+\bibitem{ibp2012matlab}
+Ilker Yildirim.
+\newblock Bayesian statistics: Indian buffet process.
+\newblock Technical report, Department of Brain and Cognitive Sciences, 2012.
+\newblock Gatsby Unit Technical Report GCNU-TR-2005-001.
+
+\bibitem{yildirimbayesian}
+Ilker Yildirim and Robert~A Jacobs.
+\newblock A bayesian nonparametric approach to multisensory perception.
+\newblock 2010.
+
+\end{thebibliography}
