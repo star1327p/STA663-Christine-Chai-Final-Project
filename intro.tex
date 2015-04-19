@@ -2,19 +2,27 @@
  \label{sec:intro}
  
 % Background -- Situation, Problem, Solution, Evaluation (SPSE)
-The paper I selected is the Infinite Latent Feature Models and the Indian Buffet Process (IBP)~\cite{griffiths2005infinite}. In unsupervised machine learning, discovering the hidden variables that generate the observations is important. Many statistical models~\cite{blei2003latent, gershman2012tutorial} can provide a latent structure in probabilitistic modeling, but the problem lies in the unknown dimensionality, i.e. how many classes/features to express the latent structure. Bayesian nonparametric methods are able to determine the number of latent features; the Chinese Restaurant Process (CRP) is an example~\cite{crp2004hierarchical}, but it assigns each customer to a single component (table). The Indian Buffet Process allows each customer to be assigned to multiple components (dishes), and the process can serve as a prior for an potentially infinite array of objects. In my implementation, IBP is regarded as a prior for the linear-Gaussian binary latent feature model, and I referred to some Matlab code online~\cite{ibp2012matlab, ibp2012code}.
+The paper I selected is ''Infinite Latent Feature Models and the Indian Buffet Process'' (IBP)~\cite{griffiths2005infinite}. In unsupervised machine learning, discovering the hidden variables that generate the observations is important. Many statistical models~\cite{blei2003latent, gershman2012tutorial} can provide a latent structure in probabilitistic modeling, but the problem lies in the unknown dimensionality, i.e. how many classes/features to express the latent structure. Bayesian nonparametric methods are able to determine the number of latent features; the Chinese Restaurant Process (CRP) is an example~\cite{crp2004hierarchical}, but it assigns each customer to a single component (table). The Indian Buffet Process allows each customer to be assigned to multiple components (dishes), and the process can serve as a prior for an potentially infinite array of objects. In my implementation, IBP is regarded as a prior for the linear-Gaussian binary latent feature model, and I referred to some Matlab code online~\cite{ibp2012matlab, ibp2012code}.
 
 \subsection{Algorithm Description}
-The Indian Buffet Process is a metaphor of Indian restaurants offering buffets with a close-to-infinite number of dishes, and the number of dishes sampled by a customer is a Poisson distribution. Assume $N$ customers enter a restaurant one after another, and the first customer takes a Poisson($\alpha$) of dishes. Starting from the second person, the $i$th customer takes dish $k$ with probability $\frac{m_k}{i}$, where $m_k$ is the number of previous customers who have sampled that dish. In this way, the $i$th customer samples dishes proportional to their popularity. After reaching the end of all previously sampled dishes, the $i$th customer tries a Poisson($\frac{\alpha}{i}$) number of new dishes. Which customer sampled which dish is recorded in a binary array $Z$ with $N$ rows (representing customers) and infinitely many columns (representing dishes), where $z_{ik} = 1$ if customer $i$ sampled the dish $k$. Note that the customers are not exchangeable, i.e. the dishes a customer samples is dependent on whether previous customers have sampled that dish~\cite{griffiths2005infinite}.\\
+\label{sub:IBPalg}
+The Indian Buffet Process is a metaphor of Indian restaurants offering buffets with a close-to-infinite number of dishes, and the number of dishes sampled by a customer is a Poisson distribution. Assume $N$ customers enter a restaurant one after another, and the first customer takes a Poisson($\alpha$) of dishes. Starting from the second person, the $i$th customer takes dish $k$ with probability $\frac{m_k}{i}$, where $m_k$ is the number of previous customers who have sampled that dish. In this way, the $i$th customer samples dishes proportional to their popularity. After reaching the end of all previously sampled dishes, the $i$th customer tries a Poisson($\frac{\alpha}{i}$) number of new dishes. Which customer sampled which dish is recorded in a binary array $Z$ with $N$ rows (representing customers) and infinitely many columns (representing dishes), where $z_{ik} = 1$ if customer $i$ sampled the dish $k$. Note that the customers are not exchangeable, i.e. the dishes a customer samples is dependent on whether previous customers have sampled that dish~\cite{griffiths2005infinite}.\\ 
 
 In terms of probability, 
-\begin{equation*}
+\begin{equation}
 P(z_{ik}=1 | \mathbf{z_{-i,k}}) = \displaystyle \frac{m_{-i,k}}{N}
-\end{equation*}
+\end{equation}
 The subscript $\mathbf{_{-i,k}}$ indicates dish $k$ and all customers except for the $i$th one. If the number of dishes is truncated to $K$, then the above equation becomes
-\begin{equation*}
+\begin{equation}
 P(z_{ik}=1 | \mathbf{z_{-i,k}}) = \displaystyle \frac{m_{-i,k} + \frac{\alpha}{K}}{N + \frac{\alpha}{K}}
-\end{equation*}
+\end{equation}
+
+% Write the equations here, so we do not need to write in the code structure
+The $N$ customers can be viewed as objects, and the $K$ dishes can be regarded as features. Formally writing, $Z \sim \text{IBP}(\alpha)$, and
+\begin{equation}
+P(Z | \alpha) = \dfrac{\alpha^K}{\prod^{2^N-1}_{h=1}K_h!} \exp(-\alpha H_N) \prod^{K}_{k=1}\dfrac{(N-m_k)!(m_k-1)!}{N!}
+\end{equation}
+$\alpha$ is a variable influencing the number of features (denoted as $D$ in later sections); $m_k$ is the number of objects with feature $k$; $K_h$ is the number of features with history $h$ (whether the $N$ objects possess this feature, $2^N-1$ possibilities in total); $H_N$ is the $N^{\text{th}}$ harmonic number, i.e. $H_N = \sum^{N}_{k=1}\frac{1}{k}$.
 
 \subsection{Applications and Evaluation}
 Many applications and variations of the Indian Buffet Process exist. For example, the linear-Gaussian binary latent feature model I implemented~\cite{ibp2012matlab} can be used to model ''noisy'' matrices and reveal the latent features. In this way, image data can be processed because we can interpret binary matrices with structured representations. For another example, Yildirim and Jacob~\cite{yildirimbayesian} proposed an IBP-based Bayesian nonparametric approach to multisensory perception in an unsupervised manner. Furthermore, variations of the Indian Buffet Process include focused topic modeling~\cite{williamson2009focused}, hierarchical beta processes~\cite{williamson2009focused}, and variational inference~\cite{doshi2008variational}. \\
