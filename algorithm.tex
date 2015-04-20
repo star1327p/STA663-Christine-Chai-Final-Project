@@ -29,7 +29,7 @@ Each object $i$ has a $D$-dimensional vector of properties named $x_i$, where:
 \begin{itemize}
 \item $x_i \sim \text{Normal}(\mathbf{z_i} \mathbf{A}, \Sigma_X = \sigma_X^2\mathbf{I})$
 \item $\mathbf{z_i}$ is a $K$-dimensional binary vector (features)
-\item $\mathbf{A}$ is a $K \times D$ matrix of weights, with prior $A \sim \text{Normal}(0,\sigma_A^2 \mathbf{I})$
+\item $\mathbf{A}$ is a $K \times D$ matrix of weights, with prior $\mathbf{A} \sim \text{Normal}(0,\sigma_A^2 \mathbf{I})$
 \end{itemize}
 
 % Need to generate the images here :)
@@ -72,19 +72,16 @@ When initializing the Gibbs sampler, set $\sigma_A = 1, \sigma_X = 1, \alpha \si
 \item Generate $\alpha|Z \sim Ga(1+K_+,1+\sum^{N}_{i=1}H_i)$, where $K_+$ is the number of features with $m_k > 0$
 \end{enumerate}
 
+The Metropolis part for $\sigma_A$ is demonstrated as follows (similar case for $\sigma_X$):
+\begin{itemize}
+\item Genenerate a candidate value $\sigma_{A}^{*} = \sigma_{A} + \epsilon$, with $\epsilon \sim \text{Unif}(-0.05,0.05)$
+\item Generate a random number $r \sim \text{Unif}(0,1)$
+\item Accept $\sigma_{A}^{*}$ if $r < \text{min}\{ 1, \dfrac{P(\sigma_{A}^{*} | \mathbf{Z,X},\sigma_X)}{P(\sigma_{A} | \mathbf{Z,X},\sigma_X)} \}$, where $\sigma_{A}$ is the current value
+\end{itemize}
 
-% UNFINISHED: Write the Metropolis part, including how to normalize the log/relative probabilities
-% ### Gibbs Sampler
+The candidate value $\sigma_{A}^{*}$ is always accepted when the likelihood ratio $\frac{P(\sigma_{A}^{*} | \mathbf{Z,X},\sigma_X)}{P(\sigma_{A} | \mathbf{Z,X},\sigma_X)}$ is larger than 1, i.e. $P(\sigma_{A}^{*} | \mathbf{Z,X},\sigma_X) > P(\sigma_{A} | \mathbf{Z,X},\sigma_X)$. Nevertheless, when the likelihood ratio is less than 1, there is still a non-zero probability to accept $\sigma_{A}^{*}$, so the sampler can ''move forward''. Note that in my code, the log likelihoods are used in the following way:
 
-Metropolis for $\sigma_A$ (for $\sigma_X$ is similar):
-
-Current value: $\sigma_{A}^{(n)}$
-
-Candidate value: $\sigma_{A}^{*}$
-
-Generate $r \sim \text{Unif}(0,1)$
-
-Accept $\sigma_{A}^{*}$ if $r < \text{min}\{ 1, \dfrac{P(\sigma_{A}^{*} | \mathbf{Z,X},\sigma_X)}{P(\sigma_{A}^{(n)} | \mathbf{Z,X},\sigma_X)} \}$
-
-
-
+% including how to normalize the log/relative probabilities
+\begin{equation}
+\text{min}\{ 1, \dfrac{P(\sigma_{A}^{*} | \mathbf{Z,X},\sigma_X)}{P(\sigma_{A} | \mathbf{Z,X},\sigma_X)} \} = \exp(\text{min}\{0, \log(P(\sigma_{A}^{*} | \mathbf{Z,X},\sigma_X)) - \log(P(\sigma_{A} | \mathbf{Z,X},\sigma_X))\})
+\end{equation}
