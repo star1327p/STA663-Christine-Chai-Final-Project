@@ -1,7 +1,8 @@
 from __future__ import division
 import Cython_functions as func
 # You need to convert them into .py files 
-
+import matplotlib
+matplotlib.use('Agg')
 import os
 import sys
 import glob
@@ -49,7 +50,7 @@ def IBP(N, alpha):
     
     return result, Kplus
 
-# --------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------------
 
 # Basis images
 import Image
@@ -64,6 +65,22 @@ b2 = basis2.reshape(D)
 b3 = basis3.reshape(D)
 b4 = basis4.reshape(D)
 A = np.array([b1,b2,b3,b4])
+
+# These are heatmaps!
+
+fig = plt.figure(figsize=(12,3)) # (num=None, tight_layout=True, figsize=(12,3), dpi=80, facecolor='w', edgecolor='k')
+fig1 = fig.add_subplot(141)
+fig1.pcolormesh(basis1,cmap=plt.cm.gray)     
+fig2 = fig.add_subplot(142)
+fig2.pcolormesh(basis2,cmap=plt.cm.gray)  
+fig3 = fig.add_subplot(143)
+fig3.pcolormesh(basis3,cmap=plt.cm.gray)  
+fig4 = fig.add_subplot(144)
+fig4.pcolormesh(basis4,cmap=plt.cm.gray) 
+
+fig.savefig('basis_images.png')
+plt.close()
+print "Latent feature matrices (A):"
 
 # Generate image data: 100 matrices of size 6*6
 N = 100
@@ -83,7 +100,16 @@ for i in range(N):
     structure[i,:,:] = add[i,0]*basis1 + add[i,1]*basis2 + add[i,2]*basis3 + add[i,3]*basis4
     images[i,:,:] = structure[i,:,:] + epsilon[i,:,:]
 
-Z_orig = add    
+Z_orig = add   
+
+# print images.shape
+print "Example image:\n",images[4]
+# plt.figure(tight_layout=True, figsize=(3,3),dpi=80)
+figEx = plt.figure(figsize=(3,3)) # (num=None, tight_layout=True, figsize=(3,3), dpi=80, facecolor='w', edgecolor='k')
+fig1 = figEx.add_subplot(111)
+fig1.pcolormesh(images[4],cmap=plt.cm.gray)
+figEx.savefig('example_image.png')
+plt.close()
 
 # Generate the Harmonic numbers, but we only need the sum
 from fractions import Fraction
@@ -164,6 +190,13 @@ elapsed1N_count = 0
 elapsed1k_init = 0
 elapsed1k_calc = 0
 
+elapsed1_arr = np.zeros(mcmc)
+elapsed2_arr = np.zeros(mcmc)
+elapsed1k_count_arr = np.zeros(mcmc)
+elapsed1N_count_arr = np.zeros(mcmc)
+elapsed1k_init_arr = np.zeros(mcmc)
+elapsed1k_calc_arr = np.zeros(mcmc)
+
 start = timeit.default_timer()
 
 # for mc in range(mcmc):
@@ -180,6 +213,14 @@ for mc in range(1000): # just test for 10 iterations
     sigmaA_arr[mc] = sigmaA
     
     print "At iteration",mc,": Kplus is",Kplus,", alpha is",alpha
+    
+    elapsed1_arr[mc] = elapsed1
+    elapsed2_arr[mc] = elapsed2
+    elapsed1k_count_arr[mc] = elapsed1k_count/N
+    elapsed1N_count_arr[mc] = elapsed1N_count/N
+    elapsed1k_init_arr[mc] = elapsed1k_init
+    elapsed1k_calc_arr[mc] = elapsed1k_calc
+    
     # print "Generating Z|alpha takes",elapsed1,"sec, and sampling sigmaX, sigmaA takes",elapsed2,"sec"
     # print "In generating Z|alpha, sampling from Kplus takes",elapsed1k_count/N,"sec, and sampling new dishes takes",elapsed1N_count/N,"sec"
     # print "In generating Z|alpha -- sampling from Kplus, initializing takes",elapsed1k_init,"sec; calculation takes",elapsed1k_calc,"sec"
@@ -192,7 +233,8 @@ for mc in range(1000): # just test for 10 iterations
     
     for i in range(N):
         # Save the matrix M so we won't need to calculate it again and again
-        #M = calcM(Z,Kplus,sigmaX,sigmaA)
+        # naive.py
+        # M = func.calcM(Z,Kplus,sigmaX,sigmaA)
         
         start1k = timeit.default_timer()
         
@@ -216,7 +258,8 @@ for mc in range(1000): # just test for 10 iterations
                     Z[:,k:(Kplus-1)] = Z[:,(k+1):Kplus]
                     Kplus -= 1
                         # Z = Z[:,0:Kplus] # remove the last column
-                    #M = calcM(Z,Kplus,sigmaX,sigmaA)          
+                    # naive.py
+                    # M = func.calcM(Z,Kplus,sigmaX,sigmaA)          
                     continue            
             
             elapsed1k_init = timeit.default_timer() - start1k_init
@@ -351,3 +394,76 @@ for mc in range(1000): # just test for 10 iterations
     
 elapsed = timeit.default_timer() - start
 print "It takes",elapsed,"sec to run 1000 iterations"
+
+# ------------------------------------------------------------------------------------------
+
+### Plot the traceplots for the IBP results
+
+fig = plt.figure(figsize=(8,8))
+fig1 = fig.add_subplot(411)
+fig1.plot(Kplus_arr)
+fig1.set_ylabel('Kplus')
+fig2 = fig.add_subplot(412)
+fig2.plot(alpha_arr)
+fig2.set_ylabel('alpha')
+fig3 = fig.add_subplot(413)
+fig3.plot(sigmaX_arr)
+fig3.set_ylabel('sigmaX')
+fig4 = fig.add_subplot(414)
+fig4.plot(sigmaA_arr)
+fig4.set_ylabel('sigmaA')
+fig4.set_xlabel('Index')
+fig.savefig('IBP_plot_results.png')
+plt.close()
+
+###### Setup the array
+Kplus_final = Kplus_arr[996] # in fact it is 5 =.=
+# Kplus_final = 4
+# Z_final = Z_arr[996,:,0:Kplus_final-1].reshape(N,Kplus_final-1)
+# Z_final = Z_arr[996,:,1:Kplus_final].reshape(N,Kplus_final-1)
+Z_final = Z_arr[996,:,0:Kplus_final].reshape(N,Kplus_final)
+sigmaX_final = sigmaX_arr[996]
+sigmaA_final = sigmaA_arr[996]
+A_inf = np.dot(np.linalg.inv(np.dot(Z_final.T,Z_final) +  ((sigmaX_final/sigmaA_final)**2)*np.identity(Kplus_final)),np.dot(Z_final.T,X))
+
+# A_inf[3,:].reshape(6,6)
+# subplot(1,4,1); imagesc(reshape(A_inf(1,:),6,6)); colormap(gray); axis off
+# subplot(1,4,2); imagesc(reshape(A_inf(2,:),6,6)); colormap(gray); axis off
+# subplot(1,4,3); imagesc(reshape(A_inf(3,:),6,6)); colormap(gray); axis off
+# subplot(1,4,4); imagesc(reshape(A_inf(4,:),6,6)); colormap(gray); axis off
+
+# print "Example image:\n",A_inf[0,:].reshape(6,6)
+fig = plt.figure(figsize=(15,3))
+fig1 = fig.add_subplot(151)
+fig1.pcolormesh(A_inf[0,:].reshape(6,6),cmap=plt.cm.gray)
+fig2 = fig.add_subplot(152)
+fig2.pcolormesh(A_inf[1,:].reshape(6,6),cmap=plt.cm.gray)
+fig3 = fig.add_subplot(153)
+fig3.pcolormesh(A_inf[2,:].reshape(6,6),cmap=plt.cm.gray)
+fig4 = fig.add_subplot(154)
+fig4.pcolormesh(A_inf[3,:].reshape(6,6),cmap=plt.cm.gray)
+fig5 = fig.add_subplot(155)
+fig5.pcolormesh(A_inf[4,:].reshape(6,6),cmap=plt.cm.gray)
+fig.savefig("IBP_image_results.png")
+plt.close()
+
+##### Save the profiling results
+step1 = np.mean(elapsed1_arr)
+step2 = np.mean(elapsed2_arr)
+step3 = np.mean(elapsed1k_count_arr)
+step4 = np.mean(elapsed1N_count_arr)
+step5 = np.mean(elapsed1k_calc_arr)
+step6 = np.mean(elapsed1k_init_arr)
+first = np.array((step1,step2,step3,step4,step5,step6)).reshape(6,1)
+second = np.array((1,1,100,100,500,500)).reshape(6,1)
+third = first*second
+
+columns = ['Time (seconds)/action','Times performed','Total time (seconds)']
+index = ['Generating Z given alpha','Sampling sigmaX, sigmaA','Sampling from K+',
+         'Sampling new dishes','Calculation','Initialization']
+
+df = pd.DataFrame(np.hstack((first,second,third)),columns=columns,index=index)
+tab = df.to_latex()
+text_file = open("Table_Cythonized.tex", "w")
+text_file.write(tab)
+text_file.close()
