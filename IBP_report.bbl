@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{blei2003latent}
 David~M Blei, Andrew~Y Ng, and Michael~I Jordan.
@@ -8,7 +8,8 @@ David~M Blei, Andrew~Y Ng, and Michael~I Jordan.
 \bibitem{doshi2008variational}
 Finale Doshi, Kurt~Tadayuki Miller, Jurgen Van~Gael, and Yee~Whye Teh.
 \newblock Variational inference for the indian buffet process.
-\newblock 2008.
+\newblock In {\em Proceedings of the 12th International Conference on
+  Artificial Intelligence and Statistics}, volume~5, 2008.
 
 \bibitem{gershman2012tutorial}
 Samuel~J Gershman and David~M Blei.
@@ -23,7 +24,13 @@ DMBTL Griffiths and MIJJB Tenenbaum.
 \bibitem{griffiths2005infinite}
 Thomas Griffiths and Zoubin Ghahramani.
 \newblock Infinite latent feature models and the indian buffet process.
-\newblock 2005.
+\newblock In {\em Advances in Neural Information Processing Systems},
+  volume~18. NIPS Proceedings, 2005.
+
+\bibitem{griffiths2005detailed}
+Thomas Griffiths and Zoubin Ghahramani.
+\newblock Infinite latent feature models and the indian buffet process.
+\newblock Technical report, Gatsby Computational Neuroscience Unit, 2005.
 
 \bibitem{williamson2009focused}
 Sinead Williamson, Chong Wang, Katherine Heller, and David Blei.
@@ -40,12 +47,15 @@ Ilker Yildirim.
 \bibitem{ibp2012matlab}
 Ilker Yildirim.
 \newblock Bayesian statistics: Indian buffet process.
-\newblock Technical report, Department of Brain and Cognitive Sciences, 2012.
-\newblock Gatsby Unit Technical Report GCNU-TR-2005-001.
+\newblock
+  \url{http://www.bcs.rochester.edu/people/robbie/jacobslab/cheat_sheet/IndianBuffetProcess.pdf},
+  2012.
+\newblock Online; accessed 2015.
 
 \bibitem{yildirimbayesian}
 Ilker Yildirim and Robert~A Jacobs.
 \newblock A bayesian nonparametric approach to multisensory perception.
-\newblock 2010.
+\newblock In {\em The annual meeting of the Cognitive Science society}, pages
+  2633--2638, 2010.
 
 \end{thebibliography}

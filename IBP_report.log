@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.16)  24 APR 2015 01:12
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.16)  25 APR 2015 00:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -164,45 +164,61 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 )
 \c@ContinuedFloat=\count103
 )
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen129
+\lightrulewidth=\dimen130
+\cmidrulewidth=\dimen131
+\belowrulesep=\dimen132
+\belowbottomsep=\dimen133
+\aboverulesep=\dimen134
+\abovetopsep=\dimen135
+\cmidrulesep=\dimen136
+\cmidrulekern=\dimen137
+\defaultaddspace=\dimen138
+\@cmidla=\count104
+\@cmidlb=\count105
+\@aboverulesep=\dimen139
+\@belowrulesep=\dimen140
+\@thisruleclass=\count106
+\@lastruleclass=\count107
+\@thisrulewidth=\dimen141
+)
 (./IBP_report.aux)
 \openout1 = `IBP_report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
-
-Package geometry Warning: The marginal notes overrun the paper.
-     Add 17.865pt and more to the right margin.
-
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
 * paper: letterpaper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(36.135pt, 542.02501pt, 36.135pt)
-* v-part:(T,H,B)=(36.135pt, 686.565pt, 72.26999pt)
+* h-part:(L,W,R)=(46.07025pt, 522.1545pt, 46.07025pt)
+* v-part:(T,H,B)=(47.69626pt, 675.72934pt, 71.54439pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=542.02501pt
-* \textheight=686.565pt
-* \oddsidemargin=-36.135pt
-* \evensidemargin=-36.135pt
-* \topmargin=-36.135pt
-* \headheight=0.0pt
-* \headsep=0.0pt
+* \textwidth=522.1545pt
+* \textheight=675.72934pt
+* \oddsidemargin=-26.19974pt
+* \evensidemargin=-26.19974pt
+* \topmargin=-61.57373pt
+* \headheight=12.0pt
+* \headsep=25.0pt
 * \topskip=12.0pt
 * \footskip=30.0pt
 * \marginparwidth=44.0pt
@@ -220,16 +236,16 @@ Package geometry Warning: The marginal notes overrun the paper.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count104
-\scratchdimen=\dimen129
+\scratchcounter=\count108
+\scratchdimen=\dimen142
 \scratchbox=\box28
-\nofMPsegments=\count105
-\nofMParguments=\count106
+\nofMPsegments=\count109
+\nofMParguments=\count110
 \everyMPshowfont=\toks22
-\MPscratchCnt=\count107
-\MPscratchDim=\dimen130
-\MPnumerator=\count108
-\makeMPintoPDFobject=\count109
+\MPscratchCnt=\count111
+\MPscratchDim=\dimen143
+\MPnumerator=\count112
+\makeMPintoPDFobject=\count113
 \everyMPtoPDFconversion=\toks23
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -295,8 +311,7 @@ File: IBP_generation.png Graphic file (type png)
 
 <use IBP_generation.png>
 Package pdftex.def Info: IBP_generation.png used on input line 6.
-(pdftex.def)             Requested size: 135.50624pt x 144.06711pt.
- [2 <./IBP_generation.png>]
+(pdftex.def)             Requested size: 130.53862pt x 138.78363pt.
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 16.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
@@ -305,19 +320,24 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 16.
 
-<basis_images.png, id=20, 867.24pt x 216.81pt>
+Overfull \hbox (11.51591pt too wide) in paragraph at lines 26--26
+[] 
+ []
+
+[2] <basis_images.png, id=20, 867.24pt x 216.81pt>
 File: basis_images.png Graphic file (type png)
  <use basis_images.png>
 Package pdftex.def Info: basis_images.png used on input line 41.
-(pdftex.def)             Requested size: 433.62166pt x 108.40472pt.
+(pdftex.def)             Requested size: 417.72519pt x 104.43152pt.
 
 <example_image.png, id=22, 216.81pt x 216.81pt>
 File: example_image.png Graphic file (type png)
  <use example_image.png>
 Package pdftex.def Info: example_image.png used on input line 46.
-(pdftex.def)             Requested size: 108.40334pt x 108.40472pt.
+(pdftex.def)             Requested size: 104.42929pt x 104.43152pt.
 
-[3 <./basis_images.png> <./example_image.png>]) (./testing.tex
+[3 <./IBP_generation.png> <./basis_images.png> <./example_image.png>])
+(./testing.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -326,45 +346,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 File: IBP_plot_results.png Graphic file (type png)
  <use IBP_plot_results.png>
 Package pdftex.def Info: IBP_plot_results.png used on input line 9.
-(pdftex.def)             Requested size: 352.31294pt x 352.30656pt.
+(pdftex.def)             Requested size: 339.39723pt x 339.39114pt.
 
 <IBP_image_results.png, id=29, 1084.05pt x 216.81pt>
 File: IBP_image_results.png Graphic file (type png)
 
 <use IBP_image_results.png>
 Package pdftex.def Info: IBP_image_results.png used on input line 17.
-(pdftex.def)             Requested size: 542.02501pt x 108.40804pt.
-) (./optimization.tex) (./table.tex) [4]
-Overfull \vbox (32.16626pt too high) has occurred while \output is active []
+(pdftex.def)             Requested size: 522.1545pt x 104.43483pt.
+) (./optimization.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
 
+ []
 
-[5 <./IBP_plot_results.png> <./IBP_image_results.png>] (./IBP_report.bbl)
-[6] (./IBP_report.aux) ) 
+[4] [5 <./IBP_plot_results.png> <./IBP_image_results.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+<IBP_profiling.png, id=40, 623.32875pt x 215.30438pt>
+File: IBP_profiling.png Graphic file (type png)
+ <use IBP_profiling.png>
+Package pdftex.def Info: IBP_profiling.png used on input line 22.
+(pdftex.def)             Requested size: 522.1545pt x 180.36165pt.
+
+(./Table_naive.tex) (./Table_usable.tex) (./Table_Cythonized.tex))
+(./comparison.tex [6 <./IBP_profiling.png>]) (./IBP_report.bbl [7]) [8]
+(./IBP_report.aux) ) 
 Here is how much of TeX's memory you used:
- 3791 strings out of 495028
- 56592 string characters out of 6181496
- 126665 words of memory out of 5000000
- 6942 multiletter control sequences out of 15000+600000
+ 3867 strings out of 495028
+ 57689 string characters out of 6181496
+ 128412 words of memory out of 5000000
+ 7003 multiletter control sequences out of 15000+600000
  11377 words of font info for 41 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,11n,38p,1155b,300s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmtt12.pfb>
-Output written on IBP_report.pdf (6 pages, 236606 bytes).
+ 38i,11n,38p,1155b,298s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
+x8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12
+.pfb>
+Output written on IBP_report.pdf (8 pages, 310324 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
- 54 compressed objects within 1 object stream
+ 98 PDF objects out of 1000 (max. 8388607)
+ 63 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

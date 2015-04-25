@@ -1,10 +1,12 @@
 \documentclass[12pt]{article}
-\usepackage[letterpaper, left=0.5in, top=0.5in, right=0.5in, bottom=1in,nohead,verbose, ignoremp]{geometry}
+\usepackage[letterpaper, scale=0.85]{geometry} % Reduce document margins
+% \usepackage[letterpaper, left=0.5in, top=0.5in, right=0.5in, bottom=1in,nohead,verbose, ignoremp]{geometry}
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{enumerate}
 \usepackage{url}
 \usepackage{caption}
+\usepackage{booktabs}
 
 %% Document starts here ...
 %%
@@ -40,27 +42,13 @@
 %\subsection{Cythonized Code}
 \input{optimization}
 
-\section{Comparative Analysis}
-
-\subsection{Chinese Restaurant Process}
-
-\subsection{Another Matlab Version Online}
-
-\subsection{Another Python Version Online}
+\input{comparison}
+%\section{Comparative Analysis}
+%\subsection{Chinese Restaurant Process}
+%\subsection{Another Matlab Version Online}
+%\subsection{Another Python Version Online}
 
 \section{Results}
-
-Table~\ref{tbl:hit} shows a simple version of tables.
-
-%\begin{minipage}{\textwidth} % Don't add minipage in front of tables!
-\begin{table}
-  \centering
-  \input{table}
-  \caption{Our top noise discoveries.}
-  \label{tbl:hit}
-\end{table}
-%\end{minipage}
-
 
 %Figure~\ref{fig:heatmap}.
 
@@ -76,7 +64,7 @@ Table~\ref{tbl:hit} shows a simple version of tables.
 Write your conclusion here
 
 \bibliographystyle{plain}
-\bibliography{intro}
+\bibliography{intro,optimization}
 
 
 \end{document}
