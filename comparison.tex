@@ -1,11 +1,67 @@
 \section{Comparative Analysis}
 
-Start the comparative analysis.
+The Indian Buffet Process (IBP) is compared with the Chinese Restaurant Process~\cite{crp2004hierarchical}, which is also a Bayesian nonparametric method to discover latent features in a given dataset. My implementation with simulated data is also compared with a Matlab version~\cite{ibp2012code} and a Python version~\cite{ibpgithub} online.
 
-\subsection{Chinese Restaurant Process}
+\subsection{Indian Buffet Process (IBP) vs Chinese Restaurant Process (CRP)}
 
-Figure refers to Gershman's and Blei's paper~\cite{gershman2012tutorial}.
+As mentioned in Section~\ref{sec:intro}, the Chinese Restaurant Process (CRP)~\cite{crp2004hierarchical} is an algorithm of customers' seating in a Chinese restaurant with infinite capacity. The first customer sits at an empty table with probability 1. Then starting from time 2, a new customer chooses randomly at either to the left of one of the previous customers, or at a new, unoccupied table.\\
 
-\subsection{Another Matlab Version Online}
+Both IBP and CRP model latent factors and perform dimensionality reduction (reduce the images or objects to latent features). They also both allow an infinite array of objects. Nevertheless, they solve different problems: IBP allows each customer to be assigned to multiple components (dishes), while CRP assigns each customer to a single component. Figure~\ref{fig:CRP} from Gershman's and Blei's paper~\cite{gershman2012tutorial} illustrates the difference between draws of IBP and CRP.
 
-\subsection{Another Python Version Online}
+\begin{figure}[!ht]
+\centering
+    \includegraphics[width=0.65\linewidth]{IBP_vs_CRP.png}
+    %\vspace{-20pt}
+    \caption{Indian Buffet Process (IBP) vs Chinese Restaurant Process (CRP)~\cite{gershman2012tutorial}}
+    \label{fig:CRP}
+\end{figure}
+
+\subsection{Indian Buffet Process: Another Matlab Version Online}
+% Matlab code: Five times faster than my Python version
+% Show their results
+% Figure: Profiling table
+
+The Matlab version I compared with is Yildirim's IBP sample code~\cite{ibp2012code}, and the simulated dataset in both versions of code are the same as in Section~\ref{sub:simulated}. For 1000 iterations of Gibbs sampling, the Matlab code takes about 400 seconds to run, while my Python version takes approximately 2000 seconds. The Matlab code is not only five times faster than my Python code, but also gives the correct four latent features, as in Figure~\ref{fig:matlabresults}.\\
+
+The truncated profiling results using the Matlab tool "Run and Time" for the functions \texttt{sampler, likelihood, calInverse} are listed in Figure~\ref{fig:ibp2012matlab}. The column "Self time" indicates the time spent in a function, but it includes the overhead time of profiling and excludes the time spent in its child functions. The function \texttt{sampler} refers to the whole Gibbs sampler; \texttt{likelihood} is the likelihood calculation, and \texttt{calInverse} is the implementation from Griffiths' and Ghahramani's paper\cite{griffiths2005detailed}, to compute $\mathbf{M}$ faster when only one $\mathbf{z_i}$ is changed. 
+
+\begin{figure}[!ht]
+\centering
+    \includegraphics[width=0.8\linewidth]{IBP_MATLABcode/matlab_code_profiling_summary.png}
+    %\vspace{-20pt}
+    \caption{Matlab code: Profiling results (truncated)}
+    \label{fig:ibp2012matlab}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+    \includegraphics[width=0.8\linewidth]{IBP_MATLABcode/Fig4_results.png}
+    %\vspace{-20pt}
+    \caption{Matlab code: Latent features discovered}
+    \label{fig:matlabresults}
+\end{figure}
+
+%UNFINISHED
+\subsection{Indian Buffet Process: Another Python Version Online}
+
+The other Python version I compared with is Andrzejewski's PyIBP~\cite{ibpgithub} on GitHub. This version has two advantages: 
+
+
+% Accelerated Gibbs Sampling
+
+
+
+### PyIBP (GitHub repository)
+- Advantage 1: Really fast, only 5 samples required
+- Advantage 2: Organized -- the author generates the modules PyIBP.py and scaledimages.py
+- Hence the user does not need to learn much about the IBP process
+- -----------------------------------------
+- Drawback 1: Inconsistency -- sometimes gets good results, sometimes really bad
+- Randomized parts: initV, sampleX, sampleZ by a normal distribution
+- Show both figures for comparison -- ground truth factor-feature weights (top) + learned factor-feature weights (bottom)
+- My code sets a random seed to ensure reproducibility of results.
+- Drawback 2: No Makefile exists, so I wrote one for it.
+-  def initV(self):
+        """ Init latent feature weights V accoring to N(0,1) """        
+        for (i,k) in zip(*self.ZV.nonzero()):
+            self.ZV[i,k] = NR.normal(0,1)
