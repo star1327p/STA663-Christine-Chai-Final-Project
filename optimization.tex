@@ -1,22 +1,6 @@
 \section{Optimization}
 In this section, I performed optimization on the IBP linear-Gaussian model. Before optimizing the code, I performed profiling to identify the bottlenecks; the code structure can be visualized as a tree in Figure~\ref{fig:profiling}. In one Gibbs sampling iteration, generating $Z|\alpha$ and sampling $\sigma_X,\sigma_A$ are performed once each. In generating $Z|\alpha$, sampling dishes from $K_+$ and sampling new dishes are done for each customer (image or object), so they are each performed $N=100$ times. In sampling dishes from $K_+$, calculation refers to the process of sampling the posterior distribution of $Z|K_+$, and initialization is the part of removing features which are all zero. Both calculation and initialization are performed $N\times K_+ \sim 500$ times for each iteration. The calculation in sampling from $K_+$ for generating $Z|\alpha$ accounts for 70\% of the time, approximately 1.4 seconds per iteration because it involves matrix inversion and likelihood calculation. Table~\ref{tab:naive} shows the profiling results for my initial code. \\
 
-To optimize the code, redundant calculations are removed first, and this version is named as "usable". When generating $Z|\alpha$, the inverted matrix $\mathbf{M} = (\mathbf{Z}^T\mathbf{Z}+\frac{\sigma_X^2}{\sigma_A^2}\mathbf{I})^{-1}$ is only calculated directly before the likelihood computation, so more than $N = 100$ matrix inversions can be removed. The profiling results are shown in Table~\ref{tab:usable}. The "usable" version code can also be cythonized (converted from Python to C), and Table~\ref{tab:cythonized} is a summary of profiling results, but the Cythonized version only improved the speed about 0.5\%.\\
-
-% Vectorization, calInverse
-I also attempted to alleviate the bottleneck of calculating $\mathbf{M}$ by using Equations (51)-(54) in Griffiths' and Ghahramani's paper~\cite{griffiths2005detailed}, but this did not work because $K_+$ got stuck at 2. Theoretically, this method below allows us to effeciently compute $M$ when only one $\mathbf{z_i}$ is changed:
-\begin{gather}
-\text{Define } \mathbf{M}_{-i} = (\sum_{j \neq i}\mathbf{z}^T_j \mathbf{z}_j + \frac{\sigma_X^2}{\sigma_A^2}\mathbf{I})^{-1} \\
-\mathbf{M}_{-i} = (\mathbf{M}^{-1} - \mathbf{z}^T_i \mathbf{z}_i)^{-1} 
-= \mathbf{M} - \dfrac{\mathbf{M}\mathbf{z}^T_i \mathbf{z}_i\mathbf{M}}{\mathbf{z}_i\mathbf{M}\mathbf{z}^T_i - 1} \\
-\mathbf{M} = (\mathbf{M}_{-i}^{-1} - \mathbf{z}^T_i \mathbf{z}_i)^{-1} 
-= \mathbf{M}_{-i} - \dfrac{\mathbf{M}_{-i}\mathbf{z}^T_i \mathbf{z}_i\mathbf{M}_{-i}}{\mathbf{z}_i\mathbf{M}_{-i}\mathbf{z}^T_i + 1}
-\end{gather}
-
-%\subsection{Profiling}
-%\subsection{Remove Redundant Calculations}
-%\subsection{Cythonized Code}
-
 \begin{figure}[!ht]
 \centering
     \includegraphics[width=\linewidth]{IBP_profiling.png}
@@ -24,6 +8,23 @@ I also attempted to alleviate the bottleneck of calculating $\mathbf{M}$ by usin
     \caption{IBP code structure for profiling}
     \label{fig:profiling}
 \end{figure}
+
+To optimize the code, redundant calculations are removed first, and this version is named as "usable". When generating $Z|\alpha$, the inverted matrix $\mathbf{M} = (\mathbf{Z}^T\mathbf{Z}+\frac{\sigma_X^2}{\sigma_A^2}\mathbf{I})^{-1}$ is only calculated directly before the likelihood computation, so more than $N = 100$ matrix inversions can be removed. The profiling results are shown in Table~\ref{tab:usable}. The "usable" version code can also be cythonized (converted from Python to C), and Table~\ref{tab:cythonized} is a summary of profiling results, but the Cythonized version only improved the speed about 0.5\%.\\
+
+% Vectorization, calInverse
+I also attempted to alleviate the bottleneck of calculating $\mathbf{M}$ by using Equations (51)-(54) in Griffiths' and Ghahramani's paper~\cite{griffiths2005detailed}, but this did not work because $K_+$ got stuck at 2. Theoretically, this method below allows us to efficiently compute $\mathbf{M}$ when only one $\mathbf{z_i}$ is changed:
+\begin{gather}
+\text{Define } \mathbf{M}_{-i} = (\sum_{j \neq i}\mathbf{z}^T_j \mathbf{z}_j + \frac{\sigma_X^2}{\sigma_A^2}\mathbf{I})^{-1} \\
+\mathbf{M}_{-i} = (\mathbf{M}^{-1} - \mathbf{z}^T_i \mathbf{z}_i)^{-1} 
+= \mathbf{M} - \dfrac{\mathbf{M}\mathbf{z}^T_i \mathbf{z}_i\mathbf{M}}{\mathbf{z}_i\mathbf{M}\mathbf{z}^T_i - 1} \\
+\mathbf{M} = (\mathbf{M}_{-i}^{-1} - \mathbf{z}^T_i \mathbf{z}_i)^{-1} 
+= \mathbf{M}_{-i} - \dfrac{\mathbf{M}_{-i}\mathbf{z}^T_i \mathbf{z}_i\mathbf{M}_{-i}}{\mathbf{z}_i\mathbf{M}_{-i}\mathbf{z}^T_i + 1}
+\end{gather}
+One drawback of this method is that numerical errors can be accumulated, leading to wrong results. Therefore, a full rank update of $\mathbf{M}$ should be performed occasionally.
+
+%\subsection{Profiling}
+%\subsection{Remove Redundant Calculations}
+%\subsection{Cythonized Code}
 
 % A table to summarize which actions take how much time.
 % Don't add minipage in front of tables!
