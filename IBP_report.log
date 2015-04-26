@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.16)  25 APR 2015 00:10
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.16)  25 APR 2015 18:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -312,28 +312,28 @@ File: IBP_generation.png Graphic file (type png)
 <use IBP_generation.png>
 Package pdftex.def Info: IBP_generation.png used on input line 6.
 (pdftex.def)             Requested size: 130.53862pt x 138.78363pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 16.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 17.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 16.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 17.
 
-Overfull \hbox (11.51591pt too wide) in paragraph at lines 26--26
+Overfull \hbox (11.51591pt too wide) in paragraph at lines 27--27
 [] 
  []
 
 [2] <basis_images.png, id=20, 867.24pt x 216.81pt>
 File: basis_images.png Graphic file (type png)
  <use basis_images.png>
-Package pdftex.def Info: basis_images.png used on input line 41.
+Package pdftex.def Info: basis_images.png used on input line 42.
 (pdftex.def)             Requested size: 417.72519pt x 104.43152pt.
 
 <example_image.png, id=22, 216.81pt x 216.81pt>
 File: example_image.png Graphic file (type png)
  <use example_image.png>
-Package pdftex.def Info: example_image.png used on input line 46.
+Package pdftex.def Info: example_image.png used on input line 47.
 (pdftex.def)             Requested size: 104.42929pt x 104.43152pt.
 
 [3 <./IBP_generation.png> <./basis_images.png> <./example_image.png>])
@@ -359,46 +359,79 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--3
 
  []
 
-[4] [5 <./IBP_plot_results.png> <./IBP_image_results.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 4--5
+[4] <IBP_profiling.png, id=35, 623.32875pt x 215.30438pt>
+File: IBP_profiling.png Graphic file (type png)
+
+<use IBP_profiling.png>
+Package pdftex.def Info: IBP_profiling.png used on input line 6.
+(pdftex.def)             Requested size: 522.1545pt x 180.36165pt.
+ [5 <./IBP_plot_results.png> <./IBP_image_results.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
 
  []
 
-<IBP_profiling.png, id=40, 623.32875pt x 215.30438pt>
-File: IBP_profiling.png Graphic file (type png)
- <use IBP_profiling.png>
-Package pdftex.def Info: IBP_profiling.png used on input line 22.
-(pdftex.def)             Requested size: 522.1545pt x 180.36165pt.
-
 (./Table_naive.tex) (./Table_usable.tex) (./Table_Cythonized.tex))
-(./comparison.tex [6 <./IBP_profiling.png>]) (./IBP_report.bbl [7]) [8]
-(./IBP_report.aux) ) 
+(./comparison.tex
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+[6 <./IBP_profiling.png>] <IBP_vs_CRP.png, id=45, 318.43968pt x 284.56313pt>
+File: IBP_vs_CRP.png Graphic file (type png)
+
+<use IBP_vs_CRP.png>
+Package pdftex.def Info: IBP_vs_CRP.png used on input line 13.
+(pdftex.def)             Requested size: 339.39723pt x 303.2898pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+
+ []
+
+[7]
+<IBP_MATLABcode/matlab_code_profiling_summary.png, id=50, 653.44125pt x 280.799
+06pt>
+File: IBP_MATLABcode/matlab_code_profiling_summary.png Graphic file (type png)
+ <use IBP_MATLABcode/matlab_code_profiling_summary.png>
+Package pdftex.def Info: IBP_MATLABcode/matlab_code_profiling_summary.png used 
+on input line 30.
+(pdftex.def)             Requested size: 417.72519pt x 179.50511pt.
+
+<IBP_MATLABcode/Fig4_results.png, id=51, 997.47656pt x 316.18124pt>
+File: IBP_MATLABcode/Fig4_results.png Graphic file (type png)
+
+<use IBP_MATLABcode/Fig4_results.png>
+Package pdftex.def Info: IBP_MATLABcode/Fig4_results.png used on input line 38.
+
+(pdftex.def)             Requested size: 417.72519pt x 132.40924pt.
+) (./IBP_report.bbl [8 <./IBP_vs_CRP.png>] [9 <./IBP_MATLABcode/matlab_code_pro
+filing_summary.png> <./IBP_MATLABcode/Fig4_results.png (PNG copy)>]) [10] (./IB
+P_report.aux) ) 
 Here is how much of TeX's memory you used:
- 3867 strings out of 495028
- 57689 string characters out of 6181496
- 128412 words of memory out of 5000000
- 7003 multiletter control sequences out of 15000+600000
+ 3888 strings out of 495028
+ 58269 string characters out of 6181496
+ 128450 words of memory out of 5000000
+ 7020 multiletter control sequences out of 15000+600000
  11377 words of font info for 41 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  38i,11n,38p,1155b,298s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
-x8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12
-.pfb>
-Output written on IBP_report.pdf (8 pages, 310324 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+bx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti1
+2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+
+Output written on IBP_report.pdf (10 pages, 375479 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
- 63 compressed objects within 1 object stream
+ 107 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

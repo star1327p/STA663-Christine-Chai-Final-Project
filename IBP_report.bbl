@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{ibpgithub}
+David Andrzejewski.
+\newblock Python ibp (pyibp).
+\newblock \url{https://github.com/davidandrzej/PyIBP}.
+\newblock Online; accessed 2015.
+
 \bibitem{blei2003latent}
 David~M Blei, Andrew~Y Ng, and Michael~I Jordan.
 \newblock Latent dirichlet allocation.
