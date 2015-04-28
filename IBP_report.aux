@@ -33,47 +33,67 @@
 \newlabel{fig:plotresults}{{3}{5}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Simulated dataset: My results\relax }}{5}}
 \newlabel{fig:imageresults}{{4}{5}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Optimization}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Profiling and Optimization}{5}}
 \citation{griffiths2005detailed}
+\citation{numba}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Profiling}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces IBP code structure for profiling\relax }}{6}}
+\newlabel{fig:profiling}{{5}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Remove Redundant Calculations}{6}}
+\newlabel{sub:usable}{{4.2}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Cythonized Code}{6}}
 \citation{crp2004hierarchical}
 \citation{ibp2012code}
 \citation{ibpgithub}
-\citation{crp2004hierarchical}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces IBP code structure for profiling\relax }}{6}}
-\newlabel{fig:profiling}{{5}{6}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Comparative Analysis}{6}}
-\citation{gershman2012tutorial}
-\citation{gershman2012tutorial}
-\citation{gershman2012tutorial}
-\citation{ibp2012code}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Naive code: Profiling results per iteration\relax }}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Using jit (just-in-time compiler)}{7}}
+\newlabel{sub:usable}{{4.4}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Comparison Tables}{7}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Initial code: Profiling results per iteration\relax }}{7}}
 \newlabel{tab:naive}{{1}{7}}
 \@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Usable code: Profiling results per iteration\relax }}{7}}
 \newlabel{tab:usable}{{2}{7}}
 \@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Cythonized code: Profiling results per iteration\relax }}{7}}
 \newlabel{tab:cythonized}{{3}{7}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Indian Buffet Process (IBP) vs Chinese Restaurant Process (CRP)}{7}}
+\citation{crp2004hierarchical}
+\citation{gershman2012tutorial}
+\citation{gershman2012tutorial}
+\citation{gershman2012tutorial}
+\citation{ibp2012code}
 \citation{griffiths2005detailed}
+\citation{ibpgithub}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Using jit (just-in-time compiler): Profiling results per iteration\relax }}{8}}
+\newlabel{tab:jit}{{4}{8}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Comparative Analysis}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Indian Buffet Process (IBP) vs Chinese Restaurant Process (CRP)}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Indian Buffet Process: Another Matlab Version Online}{8}}
+\citation{andrzejewski2011accelerated}
+\citation{doshi2009accelerated}
+\citation{andrzejewski2011accelerated}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Indian Buffet Process (IBP) vs Chinese Restaurant Process (CRP)\nobreakspace  {}\cite  {gershman2012tutorial}\relax }}{9}}
+\newlabel{fig:CRP}{{6}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Matlab code: Profiling results (truncated)\relax }}{9}}
+\newlabel{fig:ibp2012matlab}{{7}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Indian Buffet Process: Another Python Version Online}{9}}
 \bibstyle{plain}
 \bibdata{references}
 \bibcite{ibpgithub}{1}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Indian Buffet Process (IBP) vs Chinese Restaurant Process (CRP)\nobreakspace  {}\cite  {gershman2012tutorial}\relax }}{8}}
-\newlabel{fig:CRP}{{6}{8}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Indian Buffet Process: Another Matlab Version Online}{8}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Indian Buffet Process: Another Python Version Online}{8}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Results}{8}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion}{8}}
-\bibcite{blei2003latent}{2}
-\bibcite{doshi2008variational}{3}
-\bibcite{gershman2012tutorial}{4}
-\bibcite{crp2004hierarchical}{5}
-\bibcite{griffiths2005infinite}{6}
-\bibcite{griffiths2005detailed}{7}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Matlab code: Profiling results (truncated)\relax }}{9}}
-\newlabel{fig:ibp2012matlab}{{7}{9}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Matlab code: Latent features discovered\relax }}{9}}
-\newlabel{fig:matlabresults}{{8}{9}}
-\bibcite{williamson2009focused}{8}
-\bibcite{ibp2012code}{9}
-\bibcite{ibp2012matlab}{10}
-\bibcite{yildirimbayesian}{11}
+\bibcite{andrzejewski2011accelerated}{2}
+\bibcite{blei2003latent}{3}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Matlab code: Latent features discovered\relax }}{10}}
+\newlabel{fig:matlabresults}{{8}{10}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{10}}
+\bibcite{doshi2008variational}{4}
+\bibcite{doshi2009accelerated}{5}
+\bibcite{gershman2012tutorial}{6}
+\bibcite{crp2004hierarchical}{7}
+\bibcite{griffiths2005infinite}{8}
+\bibcite{griffiths2005detailed}{9}
+\bibcite{numba}{10}
+\bibcite{williamson2009focused}{11}
+\bibcite{ibp2012code}{12}
+\bibcite{ibp2012matlab}{13}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces PyIBP code: Best results\relax }}{11}}
+\newlabel{fig:PyIBPbest}{{9}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces PyIBP code: Worst results\relax }}{11}}
+\newlabel{fig:PyIBPworst}{{10}{11}}
+\bibcite{yildirimbayesian}{14}

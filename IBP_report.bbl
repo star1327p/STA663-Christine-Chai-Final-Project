@@ -6,6 +6,12 @@ David Andrzejewski.
 \newblock \url{https://github.com/davidandrzej/PyIBP}.
 \newblock Online; accessed 2015.
 
+\bibitem{andrzejewski2011accelerated}
+DM~Andrzejewski.
+\newblock Accelerated gibbs sampling for infinite sparse factor analysis.
+\newblock {\em Lawrence Livermore National Laboratory (LLNL), Livermore, CA,
+  Tech. Rep}, 2011.
+
 \bibitem{blei2003latent}
 David~M Blei, Andrew~Y Ng, and Michael~I Jordan.
 \newblock Latent dirichlet allocation.
@@ -16,6 +22,12 @@ Finale Doshi, Kurt~Tadayuki Miller, Jurgen Van~Gael, and Yee~Whye Teh.
 \newblock Variational inference for the indian buffet process.
 \newblock In {\em Proceedings of the 12th International Conference on
   Artificial Intelligence and Statistics}, volume~5, 2008.
+
+\bibitem{doshi2009accelerated}
+Finale Doshi-Velez and Zoubin Ghahramani.
+\newblock Accelerated sampling for the indian buffet process.
+\newblock In {\em Proceedings of the 26th Annual International Conference on
+  Machine Learning}, pages 273--280. ACM, 2009.
 
 \bibitem{gershman2012tutorial}
 Samuel~J Gershman and David~M Blei.
@@ -37,6 +49,12 @@ Thomas Griffiths and Zoubin Ghahramani.
 Thomas Griffiths and Zoubin Ghahramani.
 \newblock Infinite latent feature models and the indian buffet process.
 \newblock Technical report, Gatsby Computational Neuroscience Unit, 2005.
+
+\bibitem{numba}
+Numba package~in Python.
+\newblock Numba.
+\newblock \url{http://numba.pydata.org/}.
+\newblock Online; accessed 2015.
 
 \bibitem{williamson2009focused}
 Sinead Williamson, Chong Wang, Katherine Heller, and David Blei.
