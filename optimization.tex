@@ -1,5 +1,8 @@
-\section{Optimization}
-In this section, I performed optimization on the IBP linear-Gaussian model. Before optimizing the code, I performed profiling to identify the bottlenecks; the code structure can be visualized as a tree in Figure~\ref{fig:profiling}. In one Gibbs sampling iteration, generating $Z|\alpha$ and sampling $\sigma_X,\sigma_A$ are performed once each. In generating $Z|\alpha$, sampling dishes from $K_+$ and sampling new dishes are done for each customer (image or object), so they are each performed $N=100$ times. In sampling dishes from $K_+$, calculation refers to the process of sampling the posterior distribution of $Z|K_+$, and initialization is the part of removing features which are all zero. Both calculation and initialization are performed $N\times K_+ \sim 500$ times for each iteration. The calculation in sampling from $K_+$ for generating $Z|\alpha$ accounts for 70\% of the time, approximately 1.4 seconds per iteration because it involves matrix inversion and likelihood calculation. Table~\ref{tab:naive} shows the profiling results for my initial code. \\
+\section{Profiling and Optimization}
+In this section, I performed profiling and optimization on the IBP linear-Gaussian model. Profiling is done to identy the bottlenecks; the code structure can be visualized as a tree in Figure~\ref{fig:profiling}. In one Gibbs sampling iteration, generating $Z|\alpha$ and sampling $\sigma_X,\sigma_A$ are performed once each. In generating $Z|\alpha$, sampling dishes from $K_+$ and sampling new dishes are done for each customer (image or object), so they are each performed $N=100$ times. In sampling dishes from $K_+$, calculation refers to the process of sampling the posterior distribution of $Z|K_+$, and initialization is the part of removing features which are all zero. Both calculation and initialization are performed $N\times K_+ \approx 500$ times for each iteration.
+
+\subsection{Profiling}
+Table~\ref{tab:naive} shows the profiling results for my initial code. The calculation in sampling from $K_+$ for generating $Z|\alpha$ accounts for 70\% of the time, approximately 1.4 seconds per iteration because it involves matrix inversion and likelihood calculation.
 
 \begin{figure}[!ht]
 \centering
@@ -9,8 +12,11 @@ In this section, I performed optimization on the IBP linear-Gaussian model. Befo
     \label{fig:profiling}
 \end{figure}
 
-To optimize the code, redundant calculations are removed first, and this version is named as "usable". When generating $Z|\alpha$, the inverted matrix $\mathbf{M} = (\mathbf{Z}^T\mathbf{Z}+\frac{\sigma_X^2}{\sigma_A^2}\mathbf{I})^{-1}$ is only calculated directly before the likelihood computation, so more than $N = 100$ matrix inversions can be removed. The profiling results are shown in Table~\ref{tab:usable}. The "usable" version code can also be cythonized (converted from Python to C), and Table~\ref{tab:cythonized} is a summary of profiling results, but the Cythonized version only improved the speed about 0.5\%.\\
+\subsection{Remove Redundant Calculations}
+\label{sub:usable}
+To optimize the code, redundant calculations are removed first, and this version is named as "usable". When generating $Z|\alpha$, the inverted matrix $\mathbf{M} = (\mathbf{Z}^T\mathbf{Z}+\frac{\sigma_X^2}{\sigma_A^2}\mathbf{I})^{-1}$ is only calculated directly before the likelihood computation, so more than $N = 100$ matrix inversions can be removed. The profiling results are shown in Table~\ref{tab:usable}. The "usable" version code can also be cythonized (converted from Python to C), and Table~\ref{tab:cythonized} is a summary of profiling results, but the Cythonized version only improved the speed about 0.5\%.
 
+\subsection{Cythonized Code}
 % Vectorization, calInverse
 I also attempted to alleviate the bottleneck of calculating $\mathbf{M}$ by using Equations (51)-(54) in Griffiths' and Ghahramani's paper~\cite{griffiths2005detailed}, but this did not work because $K_+$ got stuck at 2. Theoretically, this method below allows us to efficiently compute $\mathbf{M}$ when only one $\mathbf{z_i}$ is changed:
 \begin{gather}
@@ -22,16 +28,21 @@ I also attempted to alleviate the bottleneck of calculating $\mathbf{M}$ by usin
 \end{gather}
 One drawback of this method is that numerical errors can be accumulated, leading to wrong results. Therefore, a full rank update of $\mathbf{M}$ should be performed occasionally.
 
-%\subsection{Profiling}
-%\subsection{Remove Redundant Calculations}
-%\subsection{Cythonized Code}
+\subsection{Using jit (just-in-time compiler)}
+
+The jit (just-in-time compiler) is from the Python package \texttt{numba}, which generates optimized machine code from the LLVM compiler infrastructure. The jit in Python is claimed to have similar performance to C/C++ without switching languages~\cite{numba}. In fact, using jit (just-in-time compiler) to compile the $\mathbf{M}$ and log-likelihood calculation functions gives the best results of all four versions in speed. The execution time of generating $Z|\alpha$ is 7.5\% less than the initial code, and 5.2\% less than the "usable" version in Section~\label{sub:usable}. The speed comparison table is shown in Table~\ref{tab:jit}.
+
+% Z|alpha: 7.5% improvement from the initial code, 5.2% improvement from the usable code.
+
+\subsection{Comparison Tables}
+All tables summarizing which actions take how much time are here for ease of comparison.
 
 % A table to summarize which actions take how much time.
 % Don't add minipage in front of tables!
 \begin{table}[!ht]
   \centering
   \input{Table_naive}
-  \caption{Naive code: Profiling results per iteration}
+  \caption{Initial code: Profiling results per iteration}
   \label{tab:naive}
 \end{table}
 
@@ -47,4 +58,11 @@ One drawback of this method is that numerical errors can be accumulated, leading
   \input{Table_Cythonized}
   \caption{Cythonized code: Profiling results per iteration}
   \label{tab:cythonized}
+\end{table}
+
+\begin{table}[!ht]
+  \centering
+  \input{Table_jit}
+  \caption{Using jit (just-in-time compiler): Profiling results per iteration}
+  \label{tab:jit}
 \end{table}
