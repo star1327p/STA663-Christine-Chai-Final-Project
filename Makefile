@@ -16,5 +16,9 @@ Cythonized: Cython_setup.py Cython_functions.pyx Cythonized.py
 	python Cython_setup.py build_ext --inplace
 	python Cythonized.py
     
+Using_jit: jit_functions.py jit_IBPcode.py
+	python jit_functions.py
+	python jit_IBPcode.py    
+    
 comparison:
 	cd PyIBP; make
