@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.16)  27 APR 2015 17:57
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.16)  28 APR 2015 22:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -184,25 +184,29 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count107
 \@thisrulewidth=\dimen141
 )
-(./IBP_report.aux
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
-LaTeX Warning: Label `sub:usable' multiply defined.
-
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+(./IBP_report.aux)
 \openout1 = `IBP_report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -352,27 +356,72 @@ File: IBP_plot_results.png Graphic file (type png)
 Package pdftex.def Info: IBP_plot_results.png used on input line 9.
 (pdftex.def)             Requested size: 339.39723pt x 339.39114pt.
 
-<IBP_image_results.png, id=29, 1084.05pt x 216.81pt>
+<IBP_image_results.png, id=29, 867.24pt x 216.81pt>
 File: IBP_image_results.png Graphic file (type png)
 
 <use IBP_image_results.png>
 Package pdftex.def Info: IBP_image_results.png used on input line 17.
+(pdftex.def)             Requested size: 522.1545pt x 130.54353pt.
+
+<IBP_image_results_K5.png, id=30, 1084.05pt x 216.81pt>
+File: IBP_image_results_K5.png Graphic file (type png)
+
+<use IBP_image_results_K5.png>
+Package pdftex.def Info: IBP_image_results_K5.png used on input line 24.
 (pdftex.def)             Requested size: 522.1545pt x 104.43483pt.
-) (./optimization.tex [4] [5 <./IBP_plot_results.png> <./IBP_image_results.png>
-]
-<IBP_profiling.png, id=40, 623.32875pt x 215.30438pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
+
+ []
+
+[4]
+
+LaTeX Warning: Text page 5 contains only floats.
+
+[5 <./IBP_plot_results.png> <./IBP_image_results.png> <./IBP_image_results_K5.p
+ng>]
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
+
+ []
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 50--39
+
+ []
+
+(./optimization.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+[6] <IBP_profiling.png, id=46, 623.32875pt x 215.30438pt>
 File: IBP_profiling.png Graphic file (type png)
- <use IBP_profiling.png>
-Package pdftex.def Info: IBP_profiling.png used on input line 9.
+
+<use IBP_profiling.png>
+Package pdftex.def Info: IBP_profiling.png used on input line 11.
 (pdftex.def)             Requested size: 522.1545pt x 180.36165pt.
 
-[6 <./IBP_profiling.png>] (./Table_naive.tex) (./Table_usable.tex)
-(./Table_Cythonized.tex) (./Table_jit.tex)) (./comparison.tex [7]
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+
+ []
+
+[7 <./IBP_profiling.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 38--39
+
+ []
+
+(./Table_naive.tex) (./Table_usable.tex) (./Table_Cythonized.tex)
+(./Table_jit.tex)) (./comparison.tex [8]
 Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
-<IBP_vs_CRP.png, id=49, 318.43968pt x 284.56313pt>
+[9] <IBP_vs_CRP.png, id=57, 318.43968pt x 284.56313pt>
 File: IBP_vs_CRP.png Graphic file (type png)
  <use IBP_vs_CRP.png>
 Package pdftex.def Info: IBP_vs_CRP.png used on input line 13.
@@ -383,7 +432,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--25
  []
 
 
-<IBP_MATLABcode/matlab_code_profiling_summary.png, id=50, 653.44125pt x 280.799
+<IBP_MATLABcode/matlab_code_profiling_summary.png, id=58, 653.44125pt x 280.799
 06pt>
 File: IBP_MATLABcode/matlab_code_profiling_summary.png Graphic file (type png)
  <use IBP_MATLABcode/matlab_code_profiling_summary.png>
@@ -391,7 +440,7 @@ Package pdftex.def Info: IBP_MATLABcode/matlab_code_profiling_summary.png used
 on input line 30.
 (pdftex.def)             Requested size: 417.72519pt x 179.50511pt.
 
-<IBP_MATLABcode/Fig4_results.png, id=51, 997.47656pt x 316.18124pt>
+<IBP_MATLABcode/Fig4_results.png, id=59, 997.47656pt x 316.18124pt>
 File: IBP_MATLABcode/Fig4_results.png Graphic file (type png)
 
 <use IBP_MATLABcode/Fig4_results.png>
@@ -403,8 +452,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
-[8] [9 <./IBP_vs_CRP.png> <./IBP_MATLABcode/matlab_code_profiling_summary.png>]
-
+[10 <./IBP_vs_CRP.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
@@ -421,7 +469,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--60
 
  []
 
-<PyIBP/example/PyIBP_comparison_best.png, id=58, 578.16pt x 433.62pt>
+[11 <./IBP_MATLABcode/matlab_code_profiling_summary.png> <./IBP_MATLABcode/Fig4
+_results.png (PNG copy)>]
+<PyIBP/example/PyIBP_comparison_best.png, id=66, 578.16pt x 433.62pt>
 File: PyIBP/example/PyIBP_comparison_best.png Graphic file (type png)
 
 <use PyIBP/example/PyIBP_comparison_best.png>
@@ -429,45 +479,46 @@ Package pdftex.def Info: PyIBP/example/PyIBP_comparison_best.png used on input
 line 66.
 (pdftex.def)             Requested size: 261.07724pt x 195.80869pt.
 
-<PyIBP/example/PyIBP_comparison_worst.png, id=59, 578.16pt x 433.62pt>
+<PyIBP/example/PyIBP_comparison_worst.png, id=67, 578.16pt x 433.62pt>
 File: PyIBP/example/PyIBP_comparison_worst.png Graphic file (type png)
 
 <use PyIBP/example/PyIBP_comparison_worst.png>
 Package pdftex.def Info: PyIBP/example/PyIBP_comparison_worst.png used on input
  line 72.
 (pdftex.def)             Requested size: 261.07724pt x 195.80869pt.
-) (./IBP_report.bbl [10 <./IBP_MATLABcode/Fig4_results.png (PNG copy)>] [11 <./
-PyIBP/example/PyIBP_comparison_best.png> <./PyIBP/example/PyIBP_comparison_wors
-t.png>]) [12] (./IBP_report.aux)
+) (./conclusion.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
 
-LaTeX Warning: There were multiply-defined labels.
+ []
 
- ) 
+) (./IBP_report.bbl [12 <./PyIBP/example/PyIBP_comparison_best.png> <./PyIBP/ex
+ample/PyIBP_comparison_worst.png>]) [13] (./IBP_report.aux) ) 
 Here is how much of TeX's memory you used:
- 3909 strings out of 495028
- 58835 string characters out of 6181496
- 127539 words of memory out of 5000000
- 7035 multiletter control sequences out of 15000+600000
+ 3962 strings out of 495028
+ 59749 string characters out of 6181496
+ 131386 words of memory out of 5000000
+ 7080 multiletter control sequences out of 15000+600000
  11377 words of font info for 41 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,11n,38p,1155b,327s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on IBP_report.pdf (12 pages, 404101 bytes).
+ 38i,11n,38p,1155b,338s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on IBP_report.pdf (13 pages, 418013 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
- 71 compressed objects within 1 object stream
+ 123 PDF objects out of 1000 (max. 8388607)
+ 74 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

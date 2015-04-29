@@ -1,21 +1,32 @@
 \begin{thebibliography}{10}
 
+\bibitem{andrzejewski2011accelerated}
+D.~M. Andrzejewski.
+\newblock Accelerated gibbs sampling for infinite sparse factor analysis.
+\newblock {\em Lawrence Livermore National Laboratory (LLNL), Livermore, CA,
+  Tech. Rep}, 2011.
+
 \bibitem{ibpgithub}
 David Andrzejewski.
 \newblock Python ibp (pyibp).
 \newblock \url{https://github.com/davidandrzej/PyIBP}.
 \newblock Online; accessed 2015.
 
-\bibitem{andrzejewski2011accelerated}
-DM~Andrzejewski.
-\newblock Accelerated gibbs sampling for infinite sparse factor analysis.
-\newblock {\em Lawrence Livermore National Laboratory (LLNL), Livermore, CA,
-  Tech. Rep}, 2011.
+\bibitem{crp2004hierarchical}
+D.~M. Blei, T.~L. Griffiths, M.~I. Jordan, and J.~B. Tenenbaum.
+\newblock Hierarchical topic models and the nested chinese restaurant process.
+\newblock {\em Advances in neural information processing systems}, 16:17, 2004.
 
 \bibitem{blei2003latent}
 David~M Blei, Andrew~Y Ng, and Michael~I Jordan.
 \newblock Latent dirichlet allocation.
 \newblock {\em Journal of Machine Learning Research}, 3:993--1022, 2003.
+
+\bibitem{matrixmult}
+Yao-Wen Chang.
+\newblock Unit 4: Dynamic programming.
+\newblock \url{http://cc.ee.ntu.edu.tw/~ywchang/Courses/Alg/unit4.pdf}, 2014.
+\newblock Online; accessed 2015.
 
 \bibitem{doshi2008variational}
 Finale Doshi, Kurt~Tadayuki Miller, Jurgen Van~Gael, and Yee~Whye Teh.
@@ -33,11 +44,6 @@ Finale Doshi-Velez and Zoubin Ghahramani.
 Samuel~J Gershman and David~M Blei.
 \newblock A tutorial on bayesian nonparametric models.
 \newblock {\em Journal of Mathematical Psychology}, 56(1):1--12, 2012.
-
-\bibitem{crp2004hierarchical}
-DMBTL Griffiths and MIJJB Tenenbaum.
-\newblock Hierarchical topic models and the nested chinese restaurant process.
-\newblock {\em Advances in neural information processing systems}, 16:17, 2004.
 
 \bibitem{griffiths2005infinite}
 Thomas Griffiths and Zoubin Ghahramani.
