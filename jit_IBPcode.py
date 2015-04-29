@@ -79,7 +79,7 @@ fig3.pcolormesh(basis3,cmap=plt.cm.gray)
 fig4 = fig.add_subplot(144)
 fig4.pcolormesh(basis4,cmap=plt.cm.gray) 
 
-#fig.savefig('basis_images.png')
+fig.savefig('basis_images.png')
 plt.close()
 print "Latent feature matrices (A):"
 
@@ -109,7 +109,7 @@ print "Example image:\n",images[4]
 figEx = plt.figure(figsize=(3,3)) # (num=None, tight_layout=True, figsize=(3,3), dpi=80, facecolor='w', edgecolor='k')
 fig1 = figEx.add_subplot(111)
 fig1.pcolormesh(images[4],cmap=plt.cm.gray)
-#figEx.savefig('example_image.png')
+figEx.savefig('example_image.png')
 plt.close()
 
 # Generate the Harmonic numbers, but we only need the sum
@@ -131,7 +131,8 @@ K = 4
 sigmaA = 1
 sigmaX = 1
 
-np.random.seed(1005)
+# np.random.seed(1005)
+np.random.seed(1)
 # alpha = stats.gamma.rvs(a = 1, loc = 0, scale = 1, size = 1)[0]
 alpha = 1
 
@@ -154,7 +155,8 @@ rX_accept = 0
 rA_accept = 0
 
 # More initialization
-np.random.seed(16)
+# np.random.seed(16)
+np.random.seed(1)
 basis1 = np.array([[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,1,0,0,0,0],[1,1,1,0,0,0],[0,1,0,0,0,0]])
 basis2 = np.array([[1,1,1,0,0,0],[1,0,1,0,0,0],[1,1,1,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]])
 basis3 = np.array([[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,1],[0,0,0,0,1,1],[0,0,0,1,1,1]])
@@ -278,13 +280,9 @@ for mc in range(1000): # just test for 10 iterations
             # Prior: P(z_ik = 1 | z_(-i,k)) = m_(-i,k) / N, where m_(-i,k) = number of objects possess feature k, excluding i
             P = np.zeros(2)
             Z[i,k] = 1
-            # M1 = calcM(Z,Kplus,sigmaX,sigmaA) 
-            # P[1] = log_likelihood(X,Z[:,0:Kplus],M1,sigmaA,sigmaX,Kplus,N,D) + np.log(sum(Z[:,k])-Z[i,k]) - np.log(N)
             M1 = func.calcM(Z,Kplus,sigmaX,sigmaA) 
             P[1] = func.log_likelihood(X,Z[:,0:Kplus],M1,sigmaA,sigmaX,Kplus,N,D) + np.log(sum(Z[:,k])-Z[i,k]) - np.log(N)
             Z[i,k] = 0
-            # M0 = calcM(Z,Kplus,sigmaX,sigmaA) 
-            # P[0] = log_likelihood(X,Z[:,0:Kplus],M0,sigmaA,sigmaX,Kplus,N,D) + np.log(N-sum(Z[:,k])) - np.log(N)
             M0 = func.calcM(Z,Kplus,sigmaX,sigmaA) 
             P[0] = func.log_likelihood(X,Z[:,0:Kplus],M0,sigmaA,sigmaX,Kplus,N,D) + np.log(N-sum(Z[:,k])) - np.log(N)
             P = np.exp(P - max(P))
@@ -324,7 +322,6 @@ for mc in range(1000): # just test for 10 iterations
             
             trun[ki] = (ki)*np.log(alphaN) - alphaN - np.log(np.math.factorial(ki)) 
             # posterior is proportional to prior x likelihood
-            # trun[ki] += log_likelihood(X,Z[:,0:(Kplus+ki)],M,sigmaA,sigmaX,Kplus+ki,N,D)
             trun[ki] += func.log_likelihood(X,Z[:,0:(Kplus+ki)],M,sigmaA,sigmaX,Kplus+ki,N,D)
             
         # Z[i,Kplus:(Kplus+4)] = 0
@@ -353,7 +350,7 @@ for mc in range(1000): # just test for 10 iterations
     
     # M = calcM(Z, Kplus+new_dishes, sigmaX, sigmaA)
     M = func.calcM(Z, Kplus, sigmaX, sigmaA)
-    # logLik = log_likelihood(X, Z[:,0:(Kplus+new_dishes)], M, sigmaA, sigmaX, Kplus+new_dishes, N, D)
+    #logLik = log_likelihood(X, Z[:,0:(Kplus+new_dishes)], M, sigmaA, sigmaX, Kplus+new_dishes, N, D)
     logLik = func.log_likelihood(X, Z[:,0:Kplus], M, sigmaA, sigmaX, Kplus, N, D)
     epsilonX = stats.uniform.rvs(loc=0,scale=1,size=1) 
     if epsilonX < 0.5:
@@ -419,17 +416,17 @@ fig4 = fig.add_subplot(414)
 fig4.plot(sigmaA_arr)
 fig4.set_ylabel('sigmaA')
 fig4.set_xlabel('Index')
-#fig.savefig('IBP_plot_results.png')
+fig.savefig('IBP_plot_results.png')
 plt.close()
 
 ###### Setup the array
-Kplus_final = Kplus_arr[996] # in fact it is 5 =.=
+Kplus_final = Kplus_arr[999] # c.f. iteration 996: Kplus is 5
 # Kplus_final = 4
 # Z_final = Z_arr[996,:,0:Kplus_final-1].reshape(N,Kplus_final-1)
 # Z_final = Z_arr[996,:,1:Kplus_final].reshape(N,Kplus_final-1)
-Z_final = Z_arr[996,:,0:Kplus_final].reshape(N,Kplus_final)
-sigmaX_final = sigmaX_arr[996]
-sigmaA_final = sigmaA_arr[996]
+Z_final = Z_arr[999,:,0:Kplus_final].reshape(N,Kplus_final)
+sigmaX_final = sigmaX_arr[999]
+sigmaA_final = sigmaA_arr[999]
 A_inf = np.dot(np.linalg.inv(np.dot(Z_final.T,Z_final) +  ((sigmaX_final/sigmaA_final)**2)*np.identity(Kplus_final)),np.dot(Z_final.T,X))
 
 # A_inf[3,:].reshape(6,6)
@@ -439,18 +436,18 @@ A_inf = np.dot(np.linalg.inv(np.dot(Z_final.T,Z_final) +  ((sigmaX_final/sigmaA_
 # subplot(1,4,4); imagesc(reshape(A_inf(4,:),6,6)); colormap(gray); axis off
 
 # print "Example image:\n",A_inf[0,:].reshape(6,6)
-fig = plt.figure(figsize=(15,3))
-fig1 = fig.add_subplot(151)
+fig = plt.figure(figsize=(12,3))
+fig1 = fig.add_subplot(141)
 fig1.pcolormesh(A_inf[0,:].reshape(6,6),cmap=plt.cm.gray)
-fig2 = fig.add_subplot(152)
+fig2 = fig.add_subplot(142)
 fig2.pcolormesh(A_inf[1,:].reshape(6,6),cmap=plt.cm.gray)
-fig3 = fig.add_subplot(153)
+fig3 = fig.add_subplot(143)
 fig3.pcolormesh(A_inf[2,:].reshape(6,6),cmap=plt.cm.gray)
-fig4 = fig.add_subplot(154)
+fig4 = fig.add_subplot(144)
 fig4.pcolormesh(A_inf[3,:].reshape(6,6),cmap=plt.cm.gray)
-fig5 = fig.add_subplot(155)
-fig5.pcolormesh(A_inf[4,:].reshape(6,6),cmap=plt.cm.gray)
-fig.savefig("IBP_image_results_jit.png")
+#fig5 = fig.add_subplot(155)
+#fig5.pcolormesh(A_inf[4,:].reshape(6,6),cmap=plt.cm.gray)
+fig.savefig("IBP_image_results.png")
 plt.close()
 
 ##### Save the profiling results
