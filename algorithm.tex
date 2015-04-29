@@ -59,12 +59,13 @@ The full (posterior) conditional distribution is
 P(z_{ik} | \mathbf{X,Z_{-i,k}},\sigma_X, \sigma_A) \propto P(\mathbf{X} | \mathbf{Z_{-i,k}},\sigma_X, \sigma_A) P(z_{ik} | \mathbf{z_{-i,k}})
 \end{equation}
 
-When initializing the Gibbs sampler, set $\sigma_A = 1, \sigma_X = 1, \alpha \sim Ga(1,1)$. Then the sampler does the following steps: ($K$ in my code is denoted as $K_+$, to differentiate it from the true value.
+When initializing the Gibbs sampler, set $\sigma_A = 1, \sigma_X = 1, \alpha \sim Ga(1,1)$. Then the sampler does the following steps: ($K$ in my code is denoted as $K_+$, to differentiate it from the true value.)
 
 \begin{enumerate}
 \item Generate $P(z_{ik} | \mathbf{X,Z_{-i,k}},\sigma_X, \sigma_A)$ using the full conditional distribution
     \begin{enumerate}
-    \item Remove singular features (at most one object has it); decrease $K_+$ by 1 for each feature removed
+    \item Remove singular features (at most one object has it);\\
+    decrease $K_+$ by 1 for each feature removed
     \item Determine each $z_{ik}$ to be $0$ or $1$ by Metropolis
     \item Add new features from $\text{Pois}(\frac{\alpha}{i})$
     \end{enumerate}
@@ -86,3 +87,9 @@ The candidate value $\sigma_{A}^{*}$ is always accepted when the likelihood rati
 \begin{equation}
 \text{min}\{ 1, \dfrac{P(\sigma_{A}^{*} | \mathbf{Z,X},\sigma_X)}{P(\sigma_{A} | \mathbf{Z,X},\sigma_X)} \} = \exp(\text{min}\{0, \log(P(\sigma_{A}^{*} | \mathbf{Z,X},\sigma_X)) - \log(P(\sigma_{A} | \mathbf{Z,X},\sigma_X))\})
 \end{equation}
+
+Finally, the posterior expectation of $\mathbf{A}$ is:
+\begin{equation}
+E(\mathbf{A}|\mathbf{X,Z}) = (\mathbf{Z}^T\mathbf{Z}+\frac{\sigma_X^2}{\sigma_A^2}\mathbf{I})^{-1} \mathbf{Z}^T \mathbf{X}
+\end{equation}
+This is denoted as $\mathbf{A}_{\text{inf}}$, with size $D \times K_+$, and $\mathbf{A}_{\text{inf}}$ is the matrix of latent features (images) my code converges to.

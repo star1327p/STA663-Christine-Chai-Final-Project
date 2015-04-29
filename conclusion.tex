@@ -1,0 +1,4 @@
+\section{Conclusion}
+The Indian Buffet Process (IBP) is a Bayesian nonparametric method to discover the latent structure of datasets, and it serves as the prior for many infinite latent feature models. In fact, IBP is a widely used approach in unsupervised machine learning. However, one limitation is that the results of using IBP are sensitive to the starting-point random seed settings, so one should run the code with multiple random seeds and select the one with best performance.\\
+
+Several methods can make the IBP implementation code faster, such as removing redundant calculations and Cythonizing Python code. But to gain significant improvement in speed, matrix inversions need to be done in a less computationally-expensive approach because they take the most time and resources to perform one calculation. 
