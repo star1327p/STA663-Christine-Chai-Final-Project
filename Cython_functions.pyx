@@ -15,9 +15,11 @@ def calcInverse_orig(Z, M, i, k, val):
     return Inv
 
 def calcInverse(Z, M, i, k, val):
-    """New version to check: M_(-i) = inv(inv(M) - zi.T * zi)"""
+    """New version to check: M_(-i) = inv(inv(M) - zi.T * zi) and M = inv(inv(M_(-i)) + zi.T * zi)"""
+    M_i = np.linalg.inv(np.linalg.inv(M) - np.dot(Z[i,:].T,Z[i,:]))
     Z[i,k] = val
-    return np.linalg.inv(np.linalg.inv(M) - np.dot(Z[i,:].T,Z[i,:]))
+    M = np.linalg.inv(np.linalg.inv(M_i) + np.dot(Z[i,:].T,Z[i,:]))
+    return M
 
 def log_likelihood(X,Z,M,sigmaA,sigmaX,Kplus,N,D):  
     """Calculate the log-likelihood: P(X|Z,M,sigmaA,sigmaX,Kplus,N,D)"""  
