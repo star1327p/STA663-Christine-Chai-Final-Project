@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.16)  28 APR 2015 22:11
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.16)  29 APR 2015 03:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -302,7 +302,7 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-(./intro.tex
+(./LaTeX_Reports/summary.tex) (./LaTeX_Reports/intro.tex
 Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
@@ -314,11 +314,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
  []
 
-) (./algorithm.tex <IBP_generation.png, id=14, 143.03438pt x 152.06813pt>
-File: IBP_generation.png Graphic file (type png)
+) (./LaTeX_Reports/algorithm.tex
+<More_Images/IBP_generation.png, id=11, 143.03438pt x 152.06813pt>
+File: More_Images/IBP_generation.png Graphic file (type png)
 
-<use IBP_generation.png>
-Package pdftex.def Info: IBP_generation.png used on input line 6.
+<use More_Images/IBP_generation.png>
+Package pdftex.def Info: More_Images/IBP_generation.png used on input line 6.
 (pdftex.def)             Requested size: 130.53862pt x 138.78363pt.
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 17.
 
@@ -327,112 +328,138 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 17.
-
+ [2]
 Overfull \hbox (11.51591pt too wide) in paragraph at lines 27--27
 [] 
  []
 
-[2] <basis_images.png, id=20, 867.24pt x 216.81pt>
-File: basis_images.png Graphic file (type png)
- <use basis_images.png>
-Package pdftex.def Info: basis_images.png used on input line 42.
+<Version0_Wrong/basis_images.png, id=20, 867.24pt x 216.81pt>
+File: Version0_Wrong/basis_images.png Graphic file (type png)
+
+<use Version0_Wrong/basis_images.png>
+Package pdftex.def Info: Version0_Wrong/basis_images.png used on input line 42.
+
 (pdftex.def)             Requested size: 417.72519pt x 104.43152pt.
 
-<example_image.png, id=22, 216.81pt x 216.81pt>
-File: example_image.png Graphic file (type png)
- <use example_image.png>
-Package pdftex.def Info: example_image.png used on input line 47.
-(pdftex.def)             Requested size: 104.42929pt x 104.43152pt.
+<Version0_Wrong/example_image.png, id=22, 216.81pt x 216.81pt>
+File: Version0_Wrong/example_image.png Graphic file (type png)
 
-[3 <./IBP_generation.png> <./basis_images.png> <./example_image.png>])
-(./testing.tex
+<use Version0_Wrong/example_image.png>
+Package pdftex.def Info: Version0_Wrong/example_image.png used on input line 47
+.
+(pdftex.def)             Requested size: 104.42929pt x 104.43152pt.
+ [3 <./More_Images/IBP_generation.png>])
+(./LaTeX_Reports/output.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+
+ []
+
+[4 <./Version0_Wrong/basis_images.png> <./Version0_Wrong/example_image.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+<Version1_Naive_Code/IBP_plot_results.png, id=32, 578.16pt x 578.16pt>
+File: Version1_Naive_Code/IBP_plot_results.png Graphic file (type png)
+
+<use Version1_Naive_Code/IBP_plot_results.png>
+Package pdftex.def Info: Version1_Naive_Code/IBP_plot_results.png used on input
+ line 11.
+(pdftex.def)             Requested size: 339.39723pt x 339.39114pt.
+
+<Version1_Naive_Code/IBP_image_results.png, id=33, 867.24pt x 216.81pt>
+File: Version1_Naive_Code/IBP_image_results.png Graphic file (type png)
+
+<use Version1_Naive_Code/IBP_image_results.png>
+Package pdftex.def Info: Version1_Naive_Code/IBP_image_results.png used on inpu
+t line 19.
+(pdftex.def)             Requested size: 522.1545pt x 130.54353pt.
+
+<Version0_Wrong/IBP_image_results_K5.png, id=34, 1084.05pt x 216.81pt>
+File: Version0_Wrong/IBP_image_results_K5.png Graphic file (type png)
+
+<use Version0_Wrong/IBP_image_results_K5.png>
+Package pdftex.def Info: Version0_Wrong/IBP_image_results_K5.png used on input 
+line 26.
+(pdftex.def)             Requested size: 522.1545pt x 104.43483pt.
+
+<Reverse/IBP_Histograms.png, id=35, 722.7pt x 361.35pt>
+File: Reverse/IBP_Histograms.png Graphic file (type png)
+
+<use Reverse/IBP_Histograms.png>
+Package pdftex.def Info: Reverse/IBP_Histograms.png used on input line 33.
+(pdftex.def)             Requested size: 417.72519pt x 208.86084pt.
+
+<Reverse/IBP_Reverse_Images.png, id=36, 1011.78pt x 505.89pt>
+File: Reverse/IBP_Reverse_Images.png Graphic file (type png)
+
+<use Reverse/IBP_Reverse_Images.png>
+Package pdftex.def Info: Reverse/IBP_Reverse_Images.png used on input line 40.
+(pdftex.def)             Requested size: 522.1545pt x 261.08046pt.
+) (./LaTeX_Reports/testing.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-<IBP_plot_results.png, id=28, 578.16pt x 578.16pt>
-File: IBP_plot_results.png Graphic file (type png)
- <use IBP_plot_results.png>
-Package pdftex.def Info: IBP_plot_results.png used on input line 9.
-(pdftex.def)             Requested size: 339.39723pt x 339.39114pt.
-
-<IBP_image_results.png, id=29, 867.24pt x 216.81pt>
-File: IBP_image_results.png Graphic file (type png)
-
-<use IBP_image_results.png>
-Package pdftex.def Info: IBP_image_results.png used on input line 17.
-(pdftex.def)             Requested size: 522.1545pt x 130.54353pt.
-
-<IBP_image_results_K5.png, id=30, 1084.05pt x 216.81pt>
-File: IBP_image_results_K5.png Graphic file (type png)
-
-<use IBP_image_results_K5.png>
-Package pdftex.def Info: IBP_image_results_K5.png used on input line 24.
-(pdftex.def)             Requested size: 522.1545pt x 104.43483pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
-
- []
-
-[4]
-
-LaTeX Warning: Text page 5 contains only floats.
-
-[5 <./IBP_plot_results.png> <./IBP_image_results.png> <./IBP_image_results_K5.p
-ng>]
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 44--45
-
- []
-
-)
-Underfull \hbox (badness 10000) in paragraph at lines 50--39
-
- []
-
-(./optimization.tex
+[5 <./Version1_Naive_Code/IBP_plot_results.png>] [6 <./Version1_Naive_Code/IBP_
+image_results.png> <./Version0_Wrong/IBP_image_results_K5.png> <./Reverse/IBP_H
+istograms.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
-[6] <IBP_profiling.png, id=46, 623.32875pt x 215.30438pt>
-File: IBP_profiling.png Graphic file (type png)
 
-<use IBP_profiling.png>
-Package pdftex.def Info: IBP_profiling.png used on input line 11.
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
+
+ []
+
+[7 <./Reverse/IBP_Reverse_Images.png>])
+Underfull \hbox (badness 10000) in paragraph at lines 22--43
+
+ []
+
+(./LaTeX_Reports/optimization.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+<More_Images/IBP_profiling.png, id=54, 623.32875pt x 215.30438pt>
+File: More_Images/IBP_profiling.png Graphic file (type png)
+
+<use More_Images/IBP_profiling.png>
+Package pdftex.def Info: More_Images/IBP_profiling.png used on input line 11.
 (pdftex.def)             Requested size: 522.1545pt x 180.36165pt.
-
+ [8 <./More_Images/IBP_profiling.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
 
-[7 <./IBP_profiling.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
  []
 
-(./Table_naive.tex) (./Table_usable.tex) (./Table_Cythonized.tex)
-(./Table_jit.tex)) (./comparison.tex [8]
+(./Version1_Naive_Code/Table_naive.tex) [9]
+(./Version2_Usable_Code/Table_usable.tex)
+(./Version3_Cythonized_Code/Table_Cythonized.tex)
+(./Version4_jit_Code/Table_jit.tex)) (./LaTeX_Reports/comparison.tex
 Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
-[9] <IBP_vs_CRP.png, id=57, 318.43968pt x 284.56313pt>
-File: IBP_vs_CRP.png Graphic file (type png)
- <use IBP_vs_CRP.png>
-Package pdftex.def Info: IBP_vs_CRP.png used on input line 13.
+[10] <More_Images/IBP_vs_CRP.png, id=64, 318.43968pt x 284.56313pt>
+File: More_Images/IBP_vs_CRP.png Graphic file (type png)
+
+<use More_Images/IBP_vs_CRP.png>
+Package pdftex.def Info: More_Images/IBP_vs_CRP.png used on input line 13.
 (pdftex.def)             Requested size: 339.39723pt x 303.2898pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
 
-
-<IBP_MATLABcode/matlab_code_profiling_summary.png, id=58, 653.44125pt x 280.799
+[11 <./More_Images/IBP_vs_CRP.png>]
+<IBP_MATLABcode/matlab_code_profiling_summary.png, id=68, 653.44125pt x 280.799
 06pt>
 File: IBP_MATLABcode/matlab_code_profiling_summary.png Graphic file (type png)
  <use IBP_MATLABcode/matlab_code_profiling_summary.png>
@@ -440,7 +467,7 @@ Package pdftex.def Info: IBP_MATLABcode/matlab_code_profiling_summary.png used
 on input line 30.
 (pdftex.def)             Requested size: 417.72519pt x 179.50511pt.
 
-<IBP_MATLABcode/Fig4_results.png, id=59, 997.47656pt x 316.18124pt>
+<IBP_MATLABcode/Fig4_results.png, id=69, 997.47656pt x 316.18124pt>
 File: IBP_MATLABcode/Fig4_results.png Graphic file (type png)
 
 <use IBP_MATLABcode/Fig4_results.png>
@@ -452,7 +479,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
-[10 <./IBP_vs_CRP.png>]
+[12 <./IBP_MATLABcode/matlab_code_profiling_summary.png> <./IBP_MATLABcode/Fig4
+_results.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
@@ -469,9 +497,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--60
 
  []
 
-[11 <./IBP_MATLABcode/matlab_code_profiling_summary.png> <./IBP_MATLABcode/Fig4
-_results.png (PNG copy)>]
-<PyIBP/example/PyIBP_comparison_best.png, id=66, 578.16pt x 433.62pt>
+<PyIBP/example/PyIBP_comparison_best.png, id=73, 578.16pt x 433.62pt>
 File: PyIBP/example/PyIBP_comparison_best.png Graphic file (type png)
 
 <use PyIBP/example/PyIBP_comparison_best.png>
@@ -479,46 +505,46 @@ Package pdftex.def Info: PyIBP/example/PyIBP_comparison_best.png used on input
 line 66.
 (pdftex.def)             Requested size: 261.07724pt x 195.80869pt.
 
-<PyIBP/example/PyIBP_comparison_worst.png, id=67, 578.16pt x 433.62pt>
+<PyIBP/example/PyIBP_comparison_worst.png, id=74, 578.16pt x 433.62pt>
 File: PyIBP/example/PyIBP_comparison_worst.png Graphic file (type png)
 
 <use PyIBP/example/PyIBP_comparison_worst.png>
 Package pdftex.def Info: PyIBP/example/PyIBP_comparison_worst.png used on input
  line 72.
 (pdftex.def)             Requested size: 261.07724pt x 195.80869pt.
-) (./conclusion.tex
+) (./LaTeX_Reports/conclusion.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--3
 
  []
 
-) (./IBP_report.bbl [12 <./PyIBP/example/PyIBP_comparison_best.png> <./PyIBP/ex
-ample/PyIBP_comparison_worst.png>]) [13] (./IBP_report.aux) ) 
+[13 <./PyIBP/example/PyIBP_comparison_best.png> <./PyIBP/example/PyIBP_comparis
+on_worst.png>]) (./IBP_report.bbl [14]) [15] (./IBP_report.aux) ) 
 Here is how much of TeX's memory you used:
- 3962 strings out of 495028
- 59749 string characters out of 6181496
- 131386 words of memory out of 5000000
- 7080 multiletter control sequences out of 15000+600000
+ 3987 strings out of 495028
+ 61136 string characters out of 6181496
+ 128408 words of memory out of 5000000
+ 7090 multiletter control sequences out of 15000+600000
  11377 words of font info for 41 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,11n,38p,1155b,338s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on IBP_report.pdf (13 pages, 418013 bytes).
+ 38i,11n,38p,1169b,338s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on IBP_report.pdf (15 pages, 465973 bytes).
 PDF statistics:
- 123 PDF objects out of 1000 (max. 8388607)
- 74 compressed objects within 1 object stream
+ 133 PDF objects out of 1000 (max. 8388607)
+ 78 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
