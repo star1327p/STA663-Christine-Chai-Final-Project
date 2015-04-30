@@ -1,4 +1,4 @@
-IBP_report.pdf: IBP_report.tex
+IBP_report.pdf: IBP_report.tex wrong naive reverse testing usable Cythonized Using_jit comparison
 	pdflatex IBP_report.tex
 	bibtex IBP_report.aux
 	pdflatex IBP_report.tex

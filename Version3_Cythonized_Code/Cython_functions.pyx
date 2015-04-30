@@ -1,4 +1,4 @@
-
+# %%cython -a
 import numpy as np
 
 def calcM(Z,Kplus,sigmaX,sigmaA):
