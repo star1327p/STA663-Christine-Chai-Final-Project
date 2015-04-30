@@ -1,0 +1,584 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.16)  29 APR 2015 23:58
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**IBP_report.tex
+(./IBP_report.tex
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 2 languages loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count87
+\Gm@cntv=\count88
+\c@Gm@tempcnt=\count89
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks15
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count90
+))
+\Gin@req@height=\dimen111
+\Gin@req@width=\dimen112
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen113
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen114
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count91
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count92
+\leftroot@=\count93
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count94
+\DOTSCASE@=\count95
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen115
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count96
+\c@MaxMatrixCols=\count97
+\dotsspace@=\muskip10
+\c@parentequation=\count98
+\dspbrk@lvl=\count99
+\tag@help=\toks17
+\row@=\count100
+\column@=\count101
+\maxfields@=\count102
+\andhelp@=\toks18
+\eqnshift@=\dimen116
+\alignsep@=\dimen117
+\tagshift@=\dimen118
+\tagwidth@=\dimen119
+\totwidth@=\dimen120
+\lineht@=\dimen121
+\@envbody=\toks19
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
+\@enLab=\toks21
+)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen122
+\captionmargin@=\dimen123
+\captionwidth=\dimen124
+\caption@tempdima=\dimen125
+\caption@indent=\dimen126
+\caption@parindent=\dimen127
+\caption@hangindent=\dimen128
+)
+\c@ContinuedFloat=\count103
+)
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen129
+\lightrulewidth=\dimen130
+\cmidrulewidth=\dimen131
+\belowrulesep=\dimen132
+\belowbottomsep=\dimen133
+\aboverulesep=\dimen134
+\abovetopsep=\dimen135
+\cmidrulesep=\dimen136
+\cmidrulekern=\dimen137
+\defaultaddspace=\dimen138
+\@cmidla=\count104
+\@cmidlb=\count105
+\@aboverulesep=\dimen139
+\@belowrulesep=\dimen140
+\@thisruleclass=\count106
+\@lastruleclass=\count107
+\@thisrulewidth=\dimen141
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+(./IBP_report.aux)
+\openout1 = `IBP_report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(46.07025pt, 522.1545pt, 46.07025pt)
+* v-part:(T,H,B)=(47.69626pt, 675.72934pt, 71.54439pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=522.1545pt
+* \textheight=675.72934pt
+* \oddsidemargin=-26.19974pt
+* \evensidemargin=-26.19974pt
+* \topmargin=-61.57373pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count108
+\scratchdimen=\dimen142
+\scratchbox=\box28
+\nofMPsegments=\count109
+\nofMParguments=\count110
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count111
+\MPscratchDim=\dimen143
+\MPnumerator=\count112
+\makeMPintoPDFobject=\count113
+\everyMPtoPDFconversion=\toks23
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for U+msa on input line 26.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 26.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+(./LaTeX_Reports/summary.tex) (./LaTeX_Reports/intro.tex
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
+
+ []
+
+) (./LaTeX_Reports/algorithm.tex
+<More_Images/IBP_generation.png, id=11, 143.03438pt x 152.06813pt>
+File: More_Images/IBP_generation.png Graphic file (type png)
+
+<use More_Images/IBP_generation.png>
+Package pdftex.def Info: More_Images/IBP_generation.png used on input line 6.
+(pdftex.def)             Requested size: 130.53862pt x 138.78363pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 17.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 17.
+ [2]
+Overfull \hbox (11.51591pt too wide) in paragraph at lines 27--27
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+
+ []
+
+<Version0_Wrong/basis_images.png, id=20, 867.24pt x 216.81pt>
+File: Version0_Wrong/basis_images.png Graphic file (type png)
+
+<use Version0_Wrong/basis_images.png>
+Package pdftex.def Info: Version0_Wrong/basis_images.png used on input line 44.
+
+(pdftex.def)             Requested size: 417.72519pt x 104.43152pt.
+
+<Version0_Wrong/example_image.png, id=22, 216.81pt x 216.81pt>
+File: Version0_Wrong/example_image.png Graphic file (type png)
+
+<use Version0_Wrong/example_image.png>
+Package pdftex.def Info: Version0_Wrong/example_image.png used on input line 49
+.
+(pdftex.def)             Requested size: 104.42929pt x 104.43152pt.
+ [3 <./More_Images/IBP_generation.png>])
+[4 <./Version0_Wrong/basis_images.png> <./Version0_Wrong/example_image.png>]
+(./LaTeX_Reports/output.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+<Version1_Naive_Code/IBP_plot_results.png, id=32, 578.16pt x 578.16pt>
+File: Version1_Naive_Code/IBP_plot_results.png Graphic file (type png)
+
+<use Version1_Naive_Code/IBP_plot_results.png>
+Package pdftex.def Info: Version1_Naive_Code/IBP_plot_results.png used on input
+ line 11.
+(pdftex.def)             Requested size: 339.39723pt x 339.39114pt.
+
+<Version1_Naive_Code/IBP_image_results.png, id=33, 867.24pt x 216.81pt>
+File: Version1_Naive_Code/IBP_image_results.png Graphic file (type png)
+
+<use Version1_Naive_Code/IBP_image_results.png>
+Package pdftex.def Info: Version1_Naive_Code/IBP_image_results.png used on inpu
+t line 19.
+(pdftex.def)             Requested size: 522.1545pt x 130.54353pt.
+
+<Version0_Wrong/IBP_image_results_K5.png, id=34, 1084.05pt x 216.81pt>
+File: Version0_Wrong/IBP_image_results_K5.png Graphic file (type png)
+
+<use Version0_Wrong/IBP_image_results_K5.png>
+Package pdftex.def Info: Version0_Wrong/IBP_image_results_K5.png used on input 
+line 26.
+(pdftex.def)             Requested size: 522.1545pt x 104.43483pt.
+
+<Reverse/IBP_Histograms.png, id=35, 722.7pt x 361.35pt>
+File: Reverse/IBP_Histograms.png Graphic file (type png)
+
+<use Reverse/IBP_Histograms.png>
+Package pdftex.def Info: Reverse/IBP_Histograms.png used on input line 33.
+(pdftex.def)             Requested size: 417.72519pt x 208.86084pt.
+
+<Reverse/IBP_Reverse_Images.png, id=36, 1011.78pt x 505.89pt>
+File: Reverse/IBP_Reverse_Images.png Graphic file (type png)
+
+<use Reverse/IBP_Reverse_Images.png>
+Package pdftex.def Info: Reverse/IBP_Reverse_Images.png used on input line 40.
+(pdftex.def)             Requested size: 522.1545pt x 261.08046pt.
+) (./LaTeX_Reports/testing.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+[5]
+
+LaTeX Warning: Text page 6 contains only floats.
+
+[6 <./Version1_Naive_Code/IBP_plot_results.png> <./Version1_Naive_Code/IBP_imag
+e_results.png> <./Version0_Wrong/IBP_image_results_K5.png>] [7 <./Reverse/IBP_H
+istograms.png> <./Reverse/IBP_Reverse_Images.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
+
+ []
+
+) (./LaTeX_Reports/optimization.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+[8] <More_Images/IBP_profiling.png, id=56, 623.32875pt x 215.30438pt>
+File: More_Images/IBP_profiling.png Graphic file (type png)
+
+<use More_Images/IBP_profiling.png>
+Package pdftex.def Info: More_Images/IBP_profiling.png used on input line 11.
+(pdftex.def)             Requested size: 522.1545pt x 180.36165pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
+
+ []
+
+[9 <./More_Images/IBP_profiling.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+
+ []
+
+(./Version1_Naive_Code/Table_naive.tex)
+(./Version2_Usable_Code/Table_usable.tex)
+(./Version3_Cythonized_Code/Table_Cythonized.tex)
+(./Version4_jit_Code/Table_jit.tex)) (./LaTeX_Reports/comparison.tex
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+[10] <More_Images/IBP_vs_CRP.png, id=63, 318.43968pt x 284.56313pt>
+File: More_Images/IBP_vs_CRP.png Graphic file (type png)
+
+<use More_Images/IBP_vs_CRP.png>
+Package pdftex.def Info: More_Images/IBP_vs_CRP.png used on input line 13.
+(pdftex.def)             Requested size: 339.39723pt x 303.2898pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+
+ []
+
+
+<IBP_MATLABcode/matlab_code_profiling_summary.png, id=67, 653.44125pt x 280.799
+06pt>
+File: IBP_MATLABcode/matlab_code_profiling_summary.png Graphic file (type png)
+ <use IBP_MATLABcode/matlab_code_profiling_summary.png>
+Package pdftex.def Info: IBP_MATLABcode/matlab_code_profiling_summary.png used 
+on input line 32.
+(pdftex.def)             Requested size: 417.72519pt x 179.50511pt.
+
+<IBP_MATLABcode/Fig3_histK.png, id=68, 421.575pt x 316.18124pt>
+File: IBP_MATLABcode/Fig3_histK.png Graphic file (type png)
+
+<use IBP_MATLABcode/Fig3_histK.png>
+Package pdftex.def Info: IBP_MATLABcode/Fig3_histK.png used on input line 40.
+(pdftex.def)             Requested size: 261.07724pt x 195.81323pt.
+
+<IBP_MATLABcode/Fig4_results.png, id=69, 997.47656pt x 316.18124pt>
+File: IBP_MATLABcode/Fig4_results.png Graphic file (type png)
+
+<use IBP_MATLABcode/Fig4_results.png>
+Package pdftex.def Info: IBP_MATLABcode/Fig4_results.png used on input line 48.
+
+(pdftex.def)             Requested size: 417.72519pt x 132.40924pt.
+
+<IBP_MATLABcode/Fig5_messup.png, id=70, 1025.33063pt x 316.18124pt>
+File: IBP_MATLABcode/Fig5_messup.png Graphic file (type png)
+
+<use IBP_MATLABcode/Fig5_messup.png>
+Package pdftex.def Info: IBP_MATLABcode/Fig5_messup.png used on input line 55.
+(pdftex.def)             Requested size: 417.72519pt x 128.81497pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
+
+ []
+
+[12 <./More_Images/IBP_vs_CRP.png>] [13 <./IBP_MATLABcode/matlab_code_profiling
+_summary.png> <./IBP_MATLABcode/Fig3_histK.png (PNG copy)> <./IBP_MATLABcode/Fi
+g4_results.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
+
+ []
+
+<PyIBP/example/PyIBP_comparison_best.png, id=78, 578.16pt x 433.62pt>
+File: PyIBP/example/PyIBP_comparison_best.png Graphic file (type png)
+
+<use PyIBP/example/PyIBP_comparison_best.png>
+Package pdftex.def Info: PyIBP/example/PyIBP_comparison_best.png used on input 
+line 83.
+(pdftex.def)             Requested size: 261.07724pt x 195.80869pt.
+
+<PyIBP/example/PyIBP_comparison_worst.png, id=79, 578.16pt x 433.62pt>
+File: PyIBP/example/PyIBP_comparison_worst.png Graphic file (type png)
+
+<use PyIBP/example/PyIBP_comparison_worst.png>
+Package pdftex.def Info: PyIBP/example/PyIBP_comparison_worst.png used on input
+ line 89.
+(pdftex.def)             Requested size: 261.07724pt x 195.80869pt.
+) (./LaTeX_Reports/conclusion.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+
+ []
+
+[14 <./IBP_MATLABcode/Fig5_messup.png (PNG copy)>]) (./IBP_report.bbl [15 <./Py
+IBP/example/PyIBP_comparison_best.png> <./PyIBP/example/PyIBP_comparison_worst.
+png>]) [16] (./IBP_report.aux) ) 
+Here is how much of TeX's memory you used:
+ 4079 strings out of 495028
+ 62655 string characters out of 6181496
+ 130883 words of memory out of 5000000
+ 7166 multiletter control sequences out of 15000+600000
+ 13847 words of font info for 53 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 38i,11n,38p,1169b,338s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/symbols/msbm10.pfb>
+Output written on IBP_report.pdf (16 pages, 461630 bytes).
+PDF statistics:
+ 134 PDF objects out of 1000 (max. 8388607)
+ 77 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+

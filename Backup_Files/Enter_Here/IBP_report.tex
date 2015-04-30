@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage[letterpaper, scale=0.85]{geometry} % Reduce document margins
+% \usepackage[letterpaper, left=0.5in, top=0.5in, right=0.5in, bottom=1in,nohead,verbose, ignoremp]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+\usepackage{url}
+\usepackage[justification=centering]{caption}
+\usepackage{booktabs}
+\usepackage{color}
+
+%% Document starts here ...
+%%
+
+
+%opening
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\vspace{-1in}
+\title{\bf STA663 Statistical Computation Final Project}
+\author{\bf Implementation of the Indian Buffet Process (IBP)}
+\date{Christine P. Chai}
+%\date{\today}
+\maketitle 
+%\thispagestyle{empty}
+\vspace{-0.5in}
+
+%\section*{Executive Summary}
+\input{LaTeX_Reports/summary}
+
+%\section{Introduction}
+\input{LaTeX_Reports/intro}
+
+%\section{Code Structure and Simulated Data}
+\input{LaTeX_Reports/algorithm}
+
+%\section{Algorithm Output}
+\input{LaTeX_Reports/output}
+
+%\section{Code Testing}
+\input{LaTeX_Reports/testing}
+
+%\section{Optimization}
+%\subsection{Profiling}
+%\subsection{Remove Redundant Calculations}
+%\subsection{Cythonized Code}
+\input{LaTeX_Reports/optimization}
+
+\input{LaTeX_Reports/comparison}
+%\section{Comparative Analysis}
+%\subsection{Chinese Restaurant Process}
+%\subsection{Another Matlab Version Online}
+%\subsection{Another Python Version Online}
+
+%Figure~\ref{fig:heatmap}.
+
+%\begin{figure}
+%\includegraphics[width=\linewidth]{heatmap.png}
+%\caption {Heatmap showing noise discovery in case-control studies.}
+%\label{fig:heatmap}
+%\end{figure}
+
+\input{LaTeX_Reports/conclusion}
+%\section{Conclusion}
+%Write your conclusion here
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+
+\end{document}
