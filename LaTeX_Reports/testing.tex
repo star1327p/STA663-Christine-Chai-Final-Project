@@ -1,8 +1,8 @@
 \section{Code Testing}
 % Writing code: Make it run. Make it correct. Make it fast.
-Code testing is performed by various methods. In the IBP prior, the \texttt{assert} command is used to verify $\frac{m_k}{i}$ to be a probability, i.e. between 0 and 1 -- because the $i$th ($i > 2)$ customer takes dish $k$ with probability $\frac{m_k}{i}$ in the IBP algorithm. Before doing the Gibbs sampler, the parameters $K_+, N, D, \sigma_X, \sigma_A$ are \texttt{assert}ed to be larger than 0. In many parts of my code, I used \texttt{np.dot} from \texttt{numpy} to do matrix multiplications even when the size of matrices is small, instead of multiplying each column/row one by one. In this way, the dimensions in matrix multiplications are assured to match each other.\\
+Code testing is performed by various methods. In the IBP prior, the \texttt{assert} command is used to verify $\frac{m_k}{i}$ to be a probability, i.e. between 0 and 1 --- because the $i$th ($i > 2)$ customer takes dish $k$ with probability $\frac{m_k}{i}$ in the IBP algorithm. Before doing the Gibbs sampler, the parameters $K_+, N, D, \sigma_X, \sigma_A$ are \texttt{assert}ed to be larger than 0. In many parts of my code, I used \texttt{np.dot} from \texttt{numpy} to do matrix multiplications even when the size of matrices is small, instead of multiplying each column/row one by one. In this way, the dimensions in matrix multiplications are assured to match each other.\\
 
-For unit testing, the functions \texttt{calcM}, \texttt{calInverse\_orig}, \texttt{calInverse} are tested by an external file. The first function \texttt{calcM} calculates $\mathbf{M} = (\mathbf{Z}^T\mathbf{Z}+\frac{\sigma_X^2}{\sigma_A^2}\mathbf{I})^{-1}$, and the correctness is ensured by showing that $\mathbf{M}\mathbf{M}^{-1} = \mathbf{I}$. Note that \texttt{calcM} involves inversion, so it may be a bottleneck of my IBP code.\\
+For unit testing, the functions \texttt{calcM}, \texttt{calInverse\_orig}, \texttt{calInverse} are tested by an external file. The first function \texttt{calcM} calculates $\mathbf{M} = (\mathbf{Z}^T\mathbf{Z}+\dfrac{\sigma_X^2}{\sigma_A^2}\mathbf{I})^{-1}$, and the correctness is ensured by showing that $\mathbf{M}\mathbf{M}^{-1} = \mathbf{I}$. Note that \texttt{calcM} involves inversion, so it may be a bottleneck of my IBP code.\\
 
 Therefore, I attempted to expedite the calculation of $\mathbf{M}$ by using Equations (51)-(54) in Griffiths' and Ghahramani's paper~\cite{griffiths2005detailed}, when only one value of the whole matrix $\textbf{Z}$ is changed. Theoretically, this method below allows us to efficiently compute $\mathbf{M}$ when the $i$th row of $\mathbf{Z}$ (denoted as $\mathbf{z_i}$) has changed:
 \begin{gather}
@@ -16,8 +16,10 @@ Therefore, I attempted to expedite the calculation of $\mathbf{M}$ by using Equa
 The function \texttt{calInverse\_orig} returns $\mathbf{M} = \mathbf{M}_{-i} - \dfrac{\mathbf{M}_{-i}\mathbf{z}^T_i \mathbf{z}_i\mathbf{M}_{-i}}{\mathbf{z}_i\mathbf{M}_{-i}\mathbf{z}^T_i + 1}$, and the function \texttt{calInverse} returns $\mathbf{M} = (\mathbf{M}_{-i}^{-1} - \mathbf{z}^T_i \mathbf{z}_i)^{-1} $ just for comparison results. One drawback of this method is that numerical errors can be accumulated, leading to wrong results. Therefore, a full rank update of $\mathbf{M}$ should be performed occasionally. In fact, unit testing shows that they give different results from the original \texttt{calcM} function, and using the \texttt{calInverse} functions makes $K_+$ stuck at 2, which is incorrect.\\
 
 I also tested the log-likelihood for the Poisson distribution in my IBP code by showing the probability mass function $f(x)$ below integrates to 1.
+
+% UNFINISHED
 \begin{gather}
-x \sim \text{Pois}(\lambda): f(x) = \dfrac{\lambda^x}{x!} e^{-\lambda}, x = 0,1,2,3,\cdots \\
+x \sim \text{Pois}(\lambda): f(x) = \dfrac{\lambda^x}{x!} e^{-\lambda}, \text{with } \lambda > 0 \text{ and } x = 0,1,2,3,\cdots \\
 \log f(x) = x \log \lambda - \lambda - \log(x!)
 \end{gather}
-Therefore, $\exp \log f(x) = 1$ is approximated by $\sum^{20}_{x=0}f(x)$ in the unit testing code.\\
+Therefore, $\exp(\log f(x)) = 1$ is approximated by $\sum^{20}_{x=0}f(x)$ in the unit testing code. Note that computing $f(x)$ when $x$ is large gives an error in Python due to $x!$. Stirling's formula $n! \approx \sqrt{2\pi n} (\dfrac{n}{e})^n$ is available in this case, but this is not used in my code testing because large values of $x$ are extremely rare for small $\lambda$.
